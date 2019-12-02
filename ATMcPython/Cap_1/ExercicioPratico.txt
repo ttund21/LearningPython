@@ -10,11 +10,14 @@ Exercícios práticos
 5
 
 Resposta:
+ Operadores:
  '*' - Multiplicação;
  '-' - Subtração;
  '/' - Divisão;
  '+' - Soma.
-
+ Valores:
+ 'hello' - String
+ -88.8   -  Float
 
 2. Qual das opções a seguir é uma variável e qual é uma string?
 spam
