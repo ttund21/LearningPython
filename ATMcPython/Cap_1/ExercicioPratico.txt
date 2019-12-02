@@ -1,0 +1,74 @@
+Exercícios práticos
+
+1. Quais das opções a seguir são operadores e quais são valores?
+*
+'hello'
+-88.8
+-
+/
++
+5
+
+Resposta:
+ '*' - Multiplicação;
+ '-' - Subtração;
+ '/' - Divisão;
+ '+' - Soma.
+
+
+2. Qual das opções a seguir é uma variável e qual é uma string?
+spam
+'spam'
+
+Resposta:
+  O spam é uma variavel, pois esta sem as aspas simples e 'spam' é a string pois esta sinalizado com as aspas simples.
+
+3. Nomeie três tipos de dados.
+
+Resposta:
+  Integer(int) - São numeros inteiros, ex: 1, -1, 0;
+  Float(float) - São numeros com virgula, ex: 1.1, -1.1, 0.0;
+  String(str)  - São caracteres que podem ser numeros ou letras estão sempre sinalizados por aspas simples, ex: '1', 'hello', 'helo15'.
+
+4. De que é composta uma expressão? O que fazem as expressões?
+
+Resposta:
+  Composta por valores e operadores. Expressão servem para gerar um unico valor.
+
+5. Este capítulo apresentou as instruções de atribuição, por exemplo, spam =
+10. Qual é a diferença entre uma expressão e uma instrução?
+
+Resposta:
+  Uma expressão gerará um unico valor e uma instrução não.
+
+6. O que a variável bacon conterá após o código a seguir ser executado?
+bacon = 20
+bacon + 1
+
+Resposta:
+  Conterá o valor inteiro 20.
+
+7. Para que valores as duas expressões a seguir serão avaliadas?
+'spam' + 'spamspam'
+'spam' * 3
+
+Resposta:
+  O 'spam' + 'spamspam' ficará spamspamspam;
+  O 'spam' * 3 ficará spamspamspam.
+
+8. Por que eggs é um nome válido de variável enquanto 100 é inválido?
+
+Resposta:
+  Porque o eggs segue o padrão gramatical do python, tem somente uma palavra, não começa com numeros e sem caracteres especial, colocando uma exceção no underscore. Já o 100 quebra umas das regras, pois ele começa com números.
+
+9. Quais três funções podem ser usadas para obter uma versão inteira, de
+ponto flutuante ou em string de um valor?
+
+Resposta:
+  A função int(), pode ser usada para arredondar um valor float para baixo e converte strings com numeros.
+
+10. Por que a expressão a seguir causa um erro? Como você pode corrigi-la?
+'I have eaten ' + 99 + ' burritos.'
+
+Resposta:
+  Dará erro, pois não é possivel somar string com inteiro. Para corrigir a expressão só usar a função str(). Exemplo:  'I have eaten' + str(99) + 'burritos.'
