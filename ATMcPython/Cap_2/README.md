@@ -96,7 +96,7 @@
   + Em Python uma instrução if é construída das seguintes partes:
     1. Palavra-chave(if);
     2. Uma condição(True ou False);
-    3. Dois pontos(:);
+    3. Dois-pontos(:);
     4. Um bloco de código indentado.
   + Exemplo:
     ```instrucaoif
@@ -105,3 +105,20 @@
     ```
 
 + Instrução **else**:
+  + O **if** pode ser seguido pela uma instrnção **else**;
+  + O **else** vai ser executado quando o **if** for False;
+  + "Se(if) esta condição for verdadeira execute este código; senão(else) execute aquele código.";
+  + Uma instrução **else** vai ser constituida de:
+    + Palavra-Chave(else)
+    + Dois-pontos(:)
+    + Um bloco de código indentado.
+    + Exemplo:
+      ```instrucaoelse
+      if name == 'Alice':
+        print('Hi, Alice.')
+      else:
+        print('Hello, stranger.')
+      ```
+
++ Instrução **elif**:
+  + 
