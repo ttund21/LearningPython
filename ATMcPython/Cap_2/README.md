@@ -90,6 +90,8 @@
 
 ### Instrução de controle de fluxo
 
+#### Condicionais
+
 + Instrução **if**:
   + O bloco após o if só será executado se a condição for True;
   + "Se(if) esta condição for verdadeira, execute o código que está no bloco.";
@@ -106,8 +108,9 @@
 
 + Instrução **else**:
   + O **if** pode ser seguido pela uma instrnção **else**;
-  + O **else** vai ser executado quando o **if** for False;
+  + O **else** vai ser executado quando toda estrutura condicional for False;
   + "Se(if) esta condição for verdadeira execute este código; senão(else) execute aquele código.";
+  + Usado para encerrar uma estrutura condicional;
   + Uma instrução **else** vai ser constituida de:
     + Palavra-Chave(else)
     + Dois-pontos(:)
@@ -121,4 +124,35 @@
       ```
 
 + Instrução **elif**:
-  + 
+  + Usado quando quer executar mais de uma clausula(condição);
+  + O **elif(else if)** vem sempre após um if ou outro elif;
+  + Só será executado se a clausula anterior for False;
+  + "Se a primeira condição for verdadeira, faça isso; Se segunda for verdadeira faça aquilo. Do contrário faça algo diferente."
+  + Uma instrução **elif** será constituida de:
+    + Palavra-chave(elif);
+    + Uma condição;
+    + Dois-pontos(:);
+    + Um bloco de código indentado.
+  + Exemplo:
+    ```instrucaoelif
+    if name == 'Alice':
+    	print('Hi, Alice')
+    elif age < 12:
+    	print('You are not Alice, kiddo.')
+    ```
+ 
+  + A ordem das instruções **elif** é muito importante, um exemplo:
+    ```ordemelif
+    if name == 'Alice':
+    	print('Hi, Alice.')
+    elif age < 12:
+    	print('You are not Alice, kiddo.')
+    elif age > 100:
+    	print('You are not Alice, grannie.')
+    elif age > 2000: # Esse bloco NUNCA será executado, pois o bloco acima sempre vai ser True, ouseja, qualquer numero acima é maior que 100, então 'age > 100' será sempre True.
+    	print('Unlike you, Alice is not an undead, immortal vampire.')
+    ```
+
+#### Repetição
+
++ Instruções de loop **while**
