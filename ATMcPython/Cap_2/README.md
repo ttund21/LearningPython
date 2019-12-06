@@ -155,7 +155,7 @@
 
 #### Repetição
 
-+ Instruções de loop **while**:
++ Instrução de loop **while**:
   + Usado apra repetir um código repetidamente;
   + O código na cláusula **while** ficará executando sempre que a instrução **while** for True, após se tornar False parará de executar;
   + Uma instrução **while** será constituida de:
@@ -163,4 +163,68 @@
     + Uma condição;
     + Dois-pontos(:);
     + Um bloco de linha identado.
-   
+  + Exemplo:
+  ```instrucaoloopwhile
+  username = ''
+
+  while username != 'Alice':      
+      print('\nUsername:')
+      username = input()
+      if username != 'Alice':
+          print('\nWrong Username')
+  print('\nAccess Granted!')
+
+  # Enquanto a variavel 'username' for diferente de 'Alice' a instrução while será avaliada como True e executará seu bloco repetidamente;
+  # Até que 'username' seja igual a 'Alice' ai a expressão 'Alice != Alice' será False, finalizando o loop e executando o proximo bloco. 
+  ```
+
++ Instrução **break**:
+  + Um atalho para finalizar previamente um loop;
+  + Se a instrução **break** for executada o loop será finalizado imediatamente;
+  + A instrução é apenas constituida da palavra-chave **break**;
+  + Exemplo:
+  ```intrucaobreak
+  count = ''
+  i = 0
+  print("Let's count.")
+
+  while True:
+      i = i +1
+      print(i)
+      print('Do u want stop it? y, n')
+      count = input()
+      if count == 'y':
+          break
+  print('Thank you')
+
+  # Aqui foi criado uma loop infinito definindo que o while vai ser sempre True;
+  # Depois foi instruido que se o count for igual a y, use a instrução break;
+  # Então após o break for executado o loop é quebrado e o proximo bloco é executado.
+  ```
+
++ Instrução **continue**:
+  + São usadas dentro loop;
+  + Usada para retornar o loop para o inicio;
+  + Constituida apenas da palavra-chave **continue**;
+  + Exemplo:
+  ```instrucaocontinue
+  name = ''
+  password = ''
+
+  while True:
+      print('Who are u?')
+      name = input()
+      if name != 'Joe':
+          continue
+      print('Hey, Joe. What is the password?')
+      password = input()
+      if password == 'swordfish':
+          break
+  print('Access Granted')
+
+  # Aqui foi add um loop infinito;
+  # Foi definido que enquando a variavel 'name' for diferente de 'Joe' será executado a instrução 'continue' e o loop voltará pro inicio;
+  # O código so será finalizado se e somente se name == Joe e password == swordfish.
+  ```
+
++ Loops **for** e a função **range()**:
