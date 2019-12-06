@@ -155,4 +155,12 @@
 
 #### Repetição
 
-+ Instruções de loop **while**
++ Instruções de loop **while**:
+  + Usado apra repetir um código repetidamente;
+  + O código na cláusula **while** ficará executando sempre que a instrução **while** for True, após se tornar False parará de executar;
+  + Uma instrução **while** será constituida de:
+    + Palavra-chave(while);
+    + Uma condição;
+    + Dois-pontos(:);
+    + Um bloco de linha identado.
+   
