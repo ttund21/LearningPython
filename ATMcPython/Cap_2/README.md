@@ -308,3 +308,49 @@
     ```
 
 ### Importando Módulos
+
++ Instrução **import**:
+  + No python existe um conjunto de módulos(programas) chamados de biblioteca-padrão;
+  + Esses módulos podem ser chamados em seu código usando a instração **import**;
+  + Pode ser encontrado uma lista de módulos nas [Docs do Python](https://docs.python.org/3/py-modindex.html)
+  + É constituída por:
+    + Palavra-chave **import**;
+    + Nome do módulo;
+    + Opcional, mais nomes de módulos desde que sejam separados por vírgula.
+  + Um exemplo usando o módulo [random](https://docs.python.org/3/library/random.html#module-random):
+    ```instrucaoimport
+    import random
+   
+    for i in range(10):
+    	print(random.randint(1,100))
+    ```
+  + Um exemplo usando 2 módulos:
+    ```instrucaoimport2
+    import random, math
+   
+    number = random.randint(10, 100)
+    print('Random number: ' + str(number))
+    resp = math.sqrt(number)
+    print('Square root of the random number: ' + str(resp))
+    ```
+
++ Instrução **from import**:
+  + Usado para deixar mais "enxuto" o código importando apenas partes de um módulo;
+  + Composta por:
+    + Palavra-chave **from** seguida por nome do módulo;
+    + Palavra-chave **import** seguida por uma função do módulo.
+  + Exemplo de uso:
+  ```instrucaofromimport
+  from random import randint
+   
+  print(randint(1, 100))
+  ```
+  + Uma adendo, renomeando recursos importados usando o **as**;
+  + Exemplo:
+  ```instrucaofromimportas
+  from random import randint as d
+   
+  print(d(1, 100))
+  ```
+  
+

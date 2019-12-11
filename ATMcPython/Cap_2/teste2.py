@@ -1,2 +1,8 @@
-for i in range(100, -20, -10):
-    print(i)
+from sys import exit
+
+while True:
+    print('Type exit to exit.')
+    response = input()
+    if response == 'exit':
+        exit()
+    print('You typed ' + response + '.')
