@@ -1,0 +1,67 @@
+Exercícios práticos
+
+1. Quais são os dois valores do tipo de dado booleano? Como eles são
+escritos?
+R: True and False.
+
+2. Quais são os três operadores booleanos?
+R: And, or and not.
+
+3. Escreva as tabelas verdade de cada operador booleano (ou seja, todas as
+combinações possíveis de valores booleanos para o operador e como elas
+são avaliadas).
+R:
+True and True = True         |   True or True = True        |   not True  = False
+True and False = False       |   True or False = True       |   not False = True
+False and True = False       |   False or True = True       |
+False and False = False      |   False or False = False     |
+
+4. Para que valores as expressões a seguir são avaliadas?
+(5 > 4) and (3 == 5) = False 
+not (5 > 4) = False
+(5 > 4) or (3 == 5) = True
+not ((5 > 4) or (3 == 5)) = False
+(True and True) and (True == False) = False
+(not False) or (not True) = True
+
+5. Quais são os seis operadores de comparação?
+R: ==, !=, >, <, >=, <=.
+
+6. Qual é a diferença entre o operador “igual a” e o operador de atribuição?
+R: O operador de atribuição atribui a uma variavel um valor e o 'igual a' compara dois valores.
+
+7. Explique o que é uma condição e quando você usaria uma.
+R: Situação para desencadear, usaria quando for necessário uma condição para executar um bloco.
+
+8. Identifique os três blocos no código a seguir:
+spam = 0
+if spam == 10:
+	print('eggs') #1
+	if spam > 5:
+		print('bacon') #2
+	else:
+		print('ham') #3
+		print('spam')
+print('spam')
+
+9. Escreva um código que exiba Hello se 1 estiver armazenado em spam,
+Howdy se 2 estiver armazenado em spam e Greetings! se outro valor estiver
+armazenado em spam.
+R:
+
+10. Que tecla você deve pressionar se o seu programa estiver preso em um
+92loop infinito?
+
+11. Qual é a diferença entre break e continue?
+
+12. Qual é a diferença entre range(10), range(0, 10) e range(0, 10, 1) em um
+loop for?
+
+13. Crie um pequeno programa que mostre os números de 1 a 10 usando um
+loop for. Em seguida, crie um programa equivalente que mostre os números
+de 1 a 10 usando um loop while.
+
+14. Se você tivesse uma função chamada bacon() em um módulo chamado
+spam, como você a chamaria após ter importado spam?
+Pontos extras: Dê uma olhada nas funções round() e abs() na Internet e descubra o que
+elas fazem. Faça experimentos com elas no shell interativo.
