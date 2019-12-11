@@ -49,19 +49,52 @@ Howdy se 2 estiver armazenado em spam e Greetings! se outro valor estiver
 armazenado em spam.
 R:
 
+spam = input('spam>>> ')
+
+if spam == '1':
+    print('Hello')
+elif spam == '2':
+    print('Howdy')
+else:
+    print('Greetings')
+
+
+
 10. Que tecla você deve pressionar se o seu programa estiver preso em um
-92loop infinito?
+loop infinito?
+R: Ctrl + C
 
 11. Qual é a diferença entre break e continue?
+R: O break irá imediatamente parar o loop e o continue irá voltar o loop para o inicio.
 
 12. Qual é a diferença entre range(10), range(0, 10) e range(0, 10, 1) em um
 loop for?
+R: Range(10) - ele terá o inicio padrão em 0 e terminará em 10.
+   Range(0, 10) - Aqui foi definido o inicio em 0 e o final em 10
+   Range(0, 10, 1) - Aqui foi definido o inicio em 0 e o final em 10 em um intervalo de 1 em 1.
 
 13. Crie um pequeno programa que mostre os números de 1 a 10 usando um
 loop for. Em seguida, crie um programa equivalente que mostre os números
 de 1 a 10 usando um loop while.
+R:
+For:
+  	for i in range(1, 11):
+  		print(i)
+
+While:
+   	i = 0
+   
+   	while i < 10:
+        	i = i + 1
+        	print(i)
+
 
 14. Se você tivesse uma função chamada bacon() em um módulo chamado
 spam, como você a chamaria após ter importado spam?
+R: spam.bacon()
+
+
+
+
 Pontos extras: Dê uma olhada nas funções round() e abs() na Internet e descubra o que
 elas fazem. Faça experimentos com elas no shell interativo.
