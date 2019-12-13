@@ -94,5 +94,27 @@
 + Em outras linguagens é chamado de null, nil ou undefined;
 + Deve ser sempre digitado com letra maiúscula, **None**;
 
-### Argumentos nomeados e print()
+### Argumentos nomeados(keyword arguments) e print()
+
++ Os **keyword arguments** geralmente são usados para parâmetros opcionais;
++ Usaremos de explicação a função **print()**, que possui os parâmetros opcionais **end e sep**;
++ Um exemplo do **keyword end=**:
+  ```keywordend
+  print('Hello', end=' Keyword End ')
+  print('World')
+
+  # Em vez do print() usar o seu default que seria quebrar linha;
+  # Com o END alteramos esse default para 'Keyword End'.
+  ```
++ Um exemplo do **keyword sep=**:
+  ```keywordsep
+  print('Hello', 'World', sep=',')
+
+  # Outra vez o print() não utilizara o seu default que seria fazer o espaçamento entre as palavras;
+  # Com o SEP definimos que em vez do espaçamento usaremos vírgula.
+  ```
++ **Keyword Arguments** também podem ser utilizados nas funções que criamos, mas só sera visto mais pra frente nos tipos de dados lista e dicionário.
+
+### Escopo Local e Global
+
 
