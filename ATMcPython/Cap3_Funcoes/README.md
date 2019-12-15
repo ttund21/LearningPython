@@ -155,9 +155,94 @@
   ```escopoglobalerror
   def teste():
   	hello = "Hello World"
-
+  	return hello
   print(hello)
   ```
 + Erro gerado após a execução:
   ```erroescopoglobal
+  Traceback (most recent call last):
+    File "teste.py", line 4, in <module>
+      print(hello)
+  NameError: name 'hello' is not defined
   ```
++ Esse erro ocorre porque a função **print()** que está no escopo global está tentando chamar variável local **hello** que está no escopo local da função **teste()**;
+
+#### Escopos locais não podem usar variáveis de outros escopos locais
+
++ Lembrando que um novo escopo local é criado sempre que um nova função é criada;
++ Um exemplo de um função irá tentar acessar uma variavel local de outra função:
+  ```escopolocalerror
+  def test():
+  	hello = "Hello Wrold"
+  	return hello 
+
+  def test01():
+  	return hello
+
+  print(test01())
+  ```
++ Erro gerado após a execução:
+  ```erroescopolocal
+  Traceback (most recent call last):
+    File "teste.py", line 9, in <module>
+      print(test01())
+    File "teste.py", line 6, in test01
+      return hello
+  NameError: name 'hello' is not defined
+  ```
++ Um escopo local não pode acessar a variável local de outro escopo, então após a função **test01()** tentar retornar a variável **hello** da outra função, vai gerar o erro que esta variável não está definida.
+
+#### Variáveis globais podem ser lidas a partir de um escopo local
+
++ Um exemplo de uso de variável global em escopo local:
+  ```varGlobalEscpLocal
+  def spam():
+  	print(eggs)
+
+  eggs = 49
+  spam()
+
+  # Saída: 49
+  ```
++ Agora uma variável local sobrepõe uma global, exemplo:
+  ```varGlobalEscpLocal2
+  eggs = 49
+
+  def spam():
+  	eggs = 490
+        return eggs
+  
+  print(eggs)
+  print(spam())
+
+  # Saída: 
+  # 49
+  # 490
+  ```
+
+#### Variáveis locais e globais com o mesmo nome
+
++ O python te dá a possibilidade de ter vaiáveis locais e globais com o mesmo nome, mas é bom evitar fazer isso, pois vai deixar seu código confuso.
++ Um exemplo de uso:
+  ```varLocGloSameName
+  eggs = "Global"
+
+  def test01():
+  	eggs = "test01 local"
+  	return eggs
+
+  def test02():
+  	eggs = "test02 local"
+  	return eggs
+
+  print(eggs)
+  print(test01())
+  print(test02())
+
+  # Saída:
+  # Global
+  # test01 local
+  # test02 local
+  ```
+
+### Instrução global
