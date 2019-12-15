@@ -117,4 +117,26 @@
 
 ### Escopo Local e Global
 
++ Variáveis e parâmetros atribuídos em uma função chamada existem no **escopo local** dessa função;
++ Variáveis que existem fora de todas as funções existem no **escopo global**, e são chamadas de **variáveis globais**;
++ Exemplo:
+  ```escopos
+  greeting = "Hello My Friend" # Uma variável global, em um escopo global.
 
+  def hello(x, y): # Uma variável/parâmetro local, em um escopo local.
+  	return (x * y)
+
+  print(greeting)
+  print(hello(4, 4))
+  ```
++ Uma variável ou é global ou local, **nunca os dois juntos**;
++ Um **escopo global** é iniciado junto com o programa e é esquecido junto com a finalização do mesmo;
++ Já o **escopo local** se inicia quando uma função é chamada e é esquecido quando a função retorna;
++ Motivos porque entender escopo é importante:
+  + O código em um escopo global **não pode** usar variáveis locais;
+  + Mas um escopo local **pode usar** variáveis globais; 
+  + Um código no escopo local de uma função **não pode** usar variáveis de nenhum outro escopo local;
+  + Pode-se usar variáveis com o mesmo nome desde que elas estejam em escopos diferentes.
++ Um motivo para o python ter seperação de escopo, é para evitar um número crescente de variáveis globais, assim evitando bugs, erros por valor inadequado e etc.
+
+#### Variáveis locais não podem ser usadas no escopo global 
