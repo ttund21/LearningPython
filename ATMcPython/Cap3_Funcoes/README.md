@@ -93,6 +93,16 @@
 + É o único valor do tipo NoneType;
 + Em outras linguagens é chamado de null, nil ou undefined;
 + Deve ser sempre digitado com letra maiúscula, **None**;
++ Exemplo de saída com valor None:
+  ```exemplonone
+  def teste():
+  	hello = "Hello World"
+
+  print(teste())
+
+  # A saída desse código será 'None';
+  # Pois a função teste() não retorna valor nenhum.
+  ```
 
 ### Argumentos nomeados(keyword arguments) e print()
 
@@ -139,4 +149,15 @@
   + Pode-se usar variáveis com o mesmo nome desde que elas estejam em escopos diferentes.
 + Um motivo para o python ter seperação de escopo, é para evitar um número crescente de variáveis globais, assim evitando bugs, erros por valor inadequado e etc.
 
-#### Variáveis locais não podem ser usadas no escopo global 
+#### Variáveis locais não podem ser usadas no escopo global
+
++ Um programa com erro de escopo:
+  ```escopoglobalerror
+  def teste():
+  	hello = "Hello World"
+
+  print(hello)
+  ```
++ Erro gerado após a execução:
+  ```erroescopoglobal
+  ```
