@@ -246,3 +246,29 @@
   ```
 
 ### Instrução global
+
++ Usado para transformar uma variável local em global;
++ Se quiser modificar um valor de uma variavel local, a transforme em global, usando a instrução **global** na função;
++ Para referenciar uma variável global que está no escopo local, é necessário refernciar a função antes;
++ Um exemplo:
+  ```instucaoglobal
+  def test():
+  	global var
+  	var = 500
+  	return var
+
+  test()
+  print(var)
+  var = 5 
+  print(var)
+
+  # Saída:
+  # 500
+  # 5
+  ```
++ Regras para se dizer se uma variável está no escopo local ou global:
+  1. Se uma variável estiver sendo usado em escopo global, ele sempre será uma variável global;
+  1. Se houver a instrução global em uma variável local, ela se tornará uma variável global;
++ Em uma função uma variável vai ser global ou local, não há maneira ter uma variável que esteja nos dois tipos;
+
+### Tratamento de exceções 
