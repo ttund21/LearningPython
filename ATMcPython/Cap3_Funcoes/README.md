@@ -271,4 +271,73 @@
   1. Se houver a instrução global em uma variável local, ela se tornará uma variável global;
 + Em uma função uma variável vai ser global ou local, não há maneira ter uma variável que esteja nos dois tipos;
 
-### Tratamento de exceções 
+### Tratamento de exceções
++ Considere o seguinte código:
+  ```ZeroDivisionError
+  def test(division):
+  	return 10 / division
+
+  print(test(0))
+  ```
++ Essa vai ser a saída do programa:
+  ```ZeroDivisionErrorOut
+  Traceback (most recent call last):
+    File "teste.py", line 4, in <module>
+      print(test(0))
+    File "teste.py", line 2, in test
+      return 10 / division
+  ZeroDivisionError: division by zero
+  ```
++ **ZeroDivisionError** uma *exceção* gerada, pois não podemos dividir números por zero;
++ Então quando uma *exceção* é gerada o programa é encerrado imediatamente, coisa que não queremos pra o nosso programa;
++ Então se quisermos evitar o encerramento do nosso programa usamos as instruções de tratamento de exceções **try** e **except**;
++ Forma de uso:
+  + Palavra-chave **try**;
+  + Em um bloco de código indentado, um argumento que pode gerar um exceção;
+  + Uma linha abaixo na mesma indentação do try; Palavra-chava **except** seguido da exceção;
+  + Em um bloco de código indentado, um bloco a ser executado caso a exceção ocorra.
++ Exemplo:
+  ```TryExcept
+  def test(division):
+  	try:
+        	return 10 / division
+        except ZeroDivisionError:
+        	print('Argumento invalido')
+
+  print(test(10))
+  print(test(2))
+  print(test(5))
+  print(test(0))
+
+  # Dessa vez quando zero for executado, em vez do programa finalizar;
+  # Executará o bloco 'print('Argumento invalido')';
+
+  # Saída:
+  # 1.0
+  # 5.0
+  # 2.0
+  # Argumento invalido
+  # None
+  ```
++ Também pode ser usado na chamada das funções, exemplo:
+  ```TryExecptCall
+  def test(division):
+  	return 10 / division
+
+  try:
+  	print(test(10))
+  	print(test(5))
+  	print(test(0))
+  	print(test(2))
+  except ZeroDivisionError:
+  	print('Error')
+
+  # Note que o 'print(test(2))' não sera executado;
+  # Pois após a cláusula 'except', ela não retoma para cláusula try;
+  # Ela continuará descendo.
+  
+  # Saída:
+  # 1.0
+  # 2.0
+  # Error
+  ```
