@@ -292,9 +292,9 @@
 + Então quando uma *exceção* é gerada o programa é encerrado imediatamente, coisa que não queremos pra o nosso programa;
 + Então se quisermos evitar o encerramento do nosso programa usamos as instruções de tratamento de exceções **try** e **except**;
 + Forma de uso:
-  + Palavra-chave **try**;
+  + Palavra-chave **try**, seguido de dois-pontos(:);
   + Em um bloco de código indentado, um argumento que pode gerar um exceção;
-  + Uma linha abaixo na mesma indentação do try; Palavra-chava **except** seguido da exceção;
+  + Uma linha abaixo na mesma indentação do try; Palavra-chava **except** seguido da exceção e dois-pontos(:);
   + Em um bloco de código indentado, um bloco a ser executado caso a exceção ocorra.
 + Exemplo:
   ```TryExcept

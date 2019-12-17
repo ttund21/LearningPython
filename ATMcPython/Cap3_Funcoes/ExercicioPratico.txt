@@ -1,0 +1,48 @@
+Exercícios práticos
+
+
+1. Por que é vantajoso ter funções em seus programas?
+R: Ajuda na organização do código, reduz o número de variáveis globais, reduz a chance de bugs e compartimenta melhor o código.
+
+2. Em que momento o código de uma função é executado: quando a função é definida ou quando ela é chamada?
+R: Quando ela é chamada. 
+
+3. Que instrução cria uma função?
+R: def nomeDaFuncao():, mais especificamente o def.
+
+4. Qual é a diferença entre uma função e uma chamada de função?
+R: Uma função é um código compartimentado em um código, e chamada de função é a execução dessa função.
+
+5. Quantos escopos globais existem em um programa Python? Quantos escopos locais?
+R: Há apenas 1 escopo global e o escopo local é definido pelo número de funções criadas no código.
+
+6. O que acontece às variáveis em um escopo local quando a chamada da função retorna?
+R: É esquecida.
+
+7. O que é um valor de retorno? Um valor de retorno pode fazer parte de uma expressão?
+R: Um valor que a instrução return vai retornar para a função. Não, apenas de uma função.
+
+8. Se uma função não tiver uma instrução de retorno, qual será o valor de retorno de uma chamada a essa função?
+R: None
+
+9. Como podemos fazer com que uma variável em uma função refira-se à variável global?
+R: Colocamos a instrução 'global'.
+
+10. Qual é o tipo de dado de None?
+R: Um da vazio, nulo.
+
+11. O que a instrução import areallyourpetsnamederic faz?
+R: Vai importar um módulo chamado areallyourpetsnamederic.
+
+12. Se você tivesse uma função chamada bacon() em um módulo chamado spam, como você a chamaria após ter importado spam?
+R: spam.bacon() .
+
+13. Como podemos evitar que um programa falhe quando houver um erro?
+R: Usando a instrução try e except.
+
+14. De que é composta a cláusula try? De que é composta a cláusula except?
+R: 
+- Palavra-chave try: ;
+- Bloco de código indentado;
+- Palavra-chave except umaExceção: ;
+- Bloco de código indentado.
