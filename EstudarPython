@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Preparando seu ambiente de estudo!"
+idle3 &> /dev/null &
 xreader $HOME/Documentos/Faculdade/LearningPython/ATMcPython/Automatize-Tarefas-Macantes-Com-Python.pdf &> /dev/null & 
 google-chrome https://github.com/ttund21/LearningPython &> /dev/null & 
 google-chrome https://translate.google.com.br/?hl=pt-BR &> /dev/null &
