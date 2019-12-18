@@ -68,4 +68,84 @@
 
 ### Obtendo sublistas com slices
 
++ O **slice** serve para nos dar acesso apenas a uma parte da lista;
++ Ele é representado por dois pontos, myList[0:2], o primeiro inteiro se refere ao ínicio e o segundo ao fim;
++ Exemplo:
+  ```slice
+  myList = [0,1,2,3,4,5,6,7,8,9,10]
+  print(myList[0:6])
 
+  # Saída:
+  # [0, 1, 2, 3, 4, 5]
+  ```
++ Como um atalho podemos deixar de especificar um dos inteiros:
+  + Deixar de espicificar o primeiro inteiro ele será considerado um 0;
+    ```sliceatalho
+    myList = [0,1,2,3,4,5,6,7,8,9,10]
+    print(myList[:6])
+
+    # Saída:
+    # [0, 1, 2, 3, 4, 5]
+    ```
+  + Deixar de especificar o segundo item da lista é o mesmo que usar toda a lista, ele terminará no final da lista;
+    ```sliceatalho2
+    myList = [0,1,2,3,4,5,6,7,8,9,10]
+    print(myList[2:])
+
+    # Saída:
+    # [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    ```
+
+### Alterando valores de uma lista usando índices
+
++ Do mesmo jeito que uma variável podemos alterar os valores do itens em uma lista;
++ Só que agora colocamos o indice ao lado da variável, exemplo:
+  ```altValList
+   myList = ['Tomato', 'Potato', 'Lettuce']
+   print(myList)
+   myList[1] = 'Mango'
+   print(myList)
+  
+  # Saída:
+  # ['Tomato', 'Potato', 'Lettuce']
+  # ['Tomato', 'Mango', 'Lettuce']
+  ```
+
+### Concatenação e repetição de listas
+
++ Como os outros valores, string, integer e float, podemos concatenar listas usando usando operadores;
++ Os operados suportados são + e *;
++ Exemplos:
+  ```concaList
+  [1,2,3,4] + ['A', 'B', 'C']
+
+  # Saída:
+  # [1, 2, 3, 4, 'A', 'B', 'C']
+  ```
+
+  ```concaList2
+  ['A', 'B', 'C'] * 2
+
+  # Saída:
+  # ['A', 'B', 'C', 'A', 'B', 'C']
+  ```
+
+### Removendo valores de listas usando instrução del
+
++ A instrução **del** simplesmente vai apagar um item da sua lista, todos os outros itens serão realocados para outro índice;
++ Exemplo:
+  ```delList
+  myList = ['Tomato', 'Potato', 'Lettuce']
+  print(myList)
+  del myList[1]
+  print(myList)
+  print(myList[1])
+
+  # Saída:
+  # ['Tomato', 'Potato', 'Lettuce']
+  # ['Tomato', 'Lettuce']
+  # Lettuce
+  ```
++ O **del** pode ser usado em uma variável normal também, ele simplesmente vai deletar a variável;
+
+## Trabalhando com listas
