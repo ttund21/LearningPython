@@ -227,31 +227,35 @@
     # O código so será finalizado se e somente se name == Joe e password == swordfish.
     ```
 
-+ Loops **for** e a função **range()**:
++ Loop **for**:
   + Sua grande diferença para o **while** é que ele não vai uma condição booleana;
-  + Usados em conjunto;
-  + Usados para criar uma repetição contada numericamente;
-  + As instruções **break** e **continue** tambem podem ser usadas;
-  + Constituidos por:
-    + Palavra-chave **for**;
-    + Uma variavel;
-    + Palavra-chave **in**;
-    + Metodo **range()**;
-    + Dois-pontos(:);
-    + Um bloco de código indentado.
-  + Exemplo:
-    ```instrucaofor
-    print('What is your name?')
-    name = input('>>> ')
-    print('How many times you want to see your name?')
-    times = int(input('>>> '))
-   
-    for i in range(times):
-  	  print(name + ' ' + str(i + 1))
+  + É um loop que é executado através de uma sequêcia,ou seja, uma lista, um tupla, dicionario e etc;
+  + Praticamente ele vai fazer um contagem de 'itens' e gerar uma repetição, exemplo:
+    ```forexample
+    print('Banana has 6 letters!')
 
-    # Aqui a funcionalidade é perguntar seu nome e quantas vezes repeti-lo;
-    # Após inseri-los, será posto um loop for onde a varaiavel 'times' será usada de referencia para o 'range()', ou seja, quantas vezes será repetido o loop;
-    # Obs: No range() a contagem começa do 0.
+    for i in 'banana':
+    	print(f'{i} I like apple!')
+    # Saída:
+
+    # Banana has 6 letters!
+    # b I like apple!
+    # a I like apple!
+    # n I like apple!
+    # a I like apple!
+    # n I like apple!
+    # a I like apple!
+
+    # Veja que o for vai fazer a contagem de 'itens';
+    # Que nesse caso já que 'banana' não é uma lista, ou algo do tipo, ele vai contar por letras.
+    ```
+  + Mesma coisa acontece com o range(), quando o o gera ele vai gerar uma "lista" e o for vai contar esses itens, exemplo:
+    ```forexample2
+    print('This is the range output:')
+    print(list(range(6)), '\n')
+
+    for i in range(6):
+    	print(f'{i} I like apple!')
     ```
 
 + Equivalencia nas instruções loops:
@@ -278,6 +282,7 @@
     ```
  
 + Função **range()**:
+  + Basicamente quando chamado ele gerará uma "lista" com o respectivos argumentos passados;
   + Algumas funções podem ser chamadas com argumento seperado por virgula;
   + Apenas deve ser passado numeros inteiros no argumento;
   + Exemplo:

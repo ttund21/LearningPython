@@ -13,5 +13,5 @@ while True:
     else:
         name = name + [cname]
 
-for cname in name:
-    print('Registed Names:', cname)
+for i in range(len(name)):
+    print(f'{i + 1}º Registed Names: {name[i]}')

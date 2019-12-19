@@ -149,3 +149,43 @@
 + O **del** pode ser usado em uma variável normal também, ele simplesmente vai deletar a variável;
 
 ## Trabalhando com listas
+
+### Utilizando loops for com listas
+
++ Tecnicamente o loop for repete o bloco de código uma vez para cada valor de uma lista ou de um valor semelhante a uma lista;
++ Por exemplo:
+  ```loopforlist
+  print('Esse é o valor de range(4):')
+  print(list(range(4)),'\n')
+
+  print('Essa é a saida dele no for:')
+  for i in range(4):
+  	print(i)
+
+  # Saída:
+  #
+  # Esse é o valor de range(4):
+  # [0, 1, 2, 3] 
+  #
+  # Essa é a saida dele no for:
+  # 0
+  # 1
+  # 2
+  # 3
+  ```
++ O que o for faz é executar sua variável "i" em todos os índices de uma lista;
++ Uma boa tecnica é usar o **range(len(nomeDaLista))**, pois além de executar todos os itens da lista, você ainda vai ter um índice para anexar ao seu código, exemplo:
+  ```loopforlisttecnica
+  names = ['Anna', 'Marie', 'Jezabel']
+
+  for i in range(len(names)):
+  	print(f'{i + 1}º: {names[i]}')
+
+  # Saída:
+  #
+  # 1º: Anna
+  # 2º: Marie
+  # 3º: Jezabel
+  ```
+
+### Operadores in e not in
