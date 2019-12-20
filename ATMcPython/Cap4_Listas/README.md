@@ -304,4 +304,138 @@
   # HelloHello
   ```
 
-## Metódos
+## Métodos
+
++ O método é parecido com a função exceto que ele chamado sobre um valor;
++ Um exemplo de método é o lista.index('item'), que é um método que vai trazer a posição de um item em uma lista;
++ Cada tipo de dado tem seu próprio conjunto de método.
+
+### Encontrando um valor em uma lista com o método index()
+
++ Os valores de lista tem um método chamado **index()**, onde ele retorna o valor referente a posição do item na lista, exemplo:
+  ```mtdIndex
+  names = ['Anna', 'Marie', 'Jezabel']
+
+  print(names.index('Marie'))
+ 
+  # Saída:
+  # 1
+  ```
++ Caso o argumento passado no index não exista na lista, o python gerará uma exceção "ValueError: 'teste' is not in list";
++ E caso haja um item duplicado na lista ele retornará o valor do primeiro, exemplo:
+  ```mtdIndex2
+  names = ['Anna', 'Marie', 'Jezabel']
+
+  print(names.index('Marie'))
+ 
+  # Saída:
+  # 1
+  ```
+
+### Adicionando valores a listas com os métodos append() e insert()
+
++ Podemos adicionar um item **no final de uma lista** usando o método append(), exemplo:
+  ```mtdAppend
+  names = ['mom', 'dad', 'sister']
+
+  names.append('brother')
+  print(names)
+
+  # Saída:
+  # ['mom', 'dad', 'sister', 'brother']
+  ```
++ E também podemos adicionar um item **em qualquer índice de uma lista** usando insert(), exemplo:
+  ```mtdInsert
+  names = ['mom', 'dad', 'sister']
+
+  names.insert(1,'brother')
+  print(names)
+
+  # Saída:
+  # ['mom', 'brother', 'dad', 'sister']
+  ```
++ Tenha em mente que o código **não é "lista = lista.append('string')"** e **sim "lista.append('string')"**, não é necessário chamar uma variável e armezenar o valor de retorno nela, pois o valor de retorno desses métodos é None. Exemplo:
+  ```mtdInsertNone
+  names = ['mom', 'dad', 'sister']
+
+  names = names.insert(1,'brother')
+  print(names)
+
+  # Saída:
+  # None
+  ```
++ Métodos pertecem a um único tipo de dado. O append() e insert() são exclusivos dos valores do tipo lista;
+
+### Removendo valores de lista remove()
+
++ O método remove() é usado para apagar um item na lista, exemplo:
+  ```mtdRemove
+  names = ['mom', 'dad', 'sister']
+
+  names.remove('dad')
+  print(names)
+
+  # Saída:
+  # ['mom', 'sister']
+  ```
++ Se você tentar apagar um item que não existe, irá gerar um exceção "ValueError: list.remove(x): x not in list";
++ Se houver valores duplicados na lista apenas o primeiro vai ser apagado, exemplo:
+  ```mtdRemove2
+  names = ['mom', 'dad', 'sister', 'dad']
+
+  names.remove('dad')
+  print(names)
+
+  # Saída:
+  # ['mom', 'sister', 'dad']
+  ```
+
+### Ordenando os valores de uma lista com o método sort()
+
++ Usado para ordenar listas númericas e strings, exemplo:
+  ```mtdSort
+  names = ['d', 'b', 'c', 'a']
+  numbers = [4, 2, 3 ,1]
+
+  names.sort()
+  numbers.sort()
+  print(names)
+  print(numbers)
+
+  # Saída:
+  # ['a', 'b', 'c', 'd']
+  # [1, 2, 3, 4]
+  ```
++ Podemos passar o argumento **reverse** para ordenar de forma inversa, exemplo:
+  ```mtdSortReverse
+  names = ['d', 'b', 'c', 'a']
+
+  names.sort(reverse=True)
+  print(names)
+
+  # Saída:
+  # ['d', 'c', 'b', 'a']
+  ```
++ Listas que possuem diferentes tipos de dados como númericos(float e int) e string, gerará um exceção "TypeError: '<' not supported between instances of 'str' and 'int'";
++ O sort() usa a "ordem ASCII" e não a alfabética, então quando ele for ordenar letras maiúsculas serão postas na frente das letras minúsculas, exemplo:
+  ```mtdSortASCII
+  names = ['anne', 'Anne', 'Ying', '1']
+
+  names.sort()
+  print(names)
+  
+  # Saída:
+  # ['1', 'Anne', 'Ying', 'anne']
+  ```
++ Caso haja a necessidade de ordenar em ordem alfabética use o argumento "key=str.lower", exemplo:
+  ```mtdSortAlfabetico
+  names = ['anne', 'Anne', 'Ying', '1']
+
+  names.sort(key=str.lower)
+  print(names)
+
+  # Saída:
+  # ['1', 'anne', 'Anne', 'Ying']
+  ```
+
+## Tipos semelhantes a listas: strings e tuplas
