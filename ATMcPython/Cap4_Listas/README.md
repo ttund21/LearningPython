@@ -189,3 +189,119 @@
   ```
 
 ### Operadores in e not in
+
++ Podemos usa-los para determinar se um determinado valor está em uma lista;
++ Eles são usados em expressões e faz a associção de dois valores, o primeiro vai ser o valor a ser procurado e o segundo a lista que ele deve procurar;
++ As expressões irão retornar um valor booleano;
++ Exemplo:
+  ```inNotInExample
+  myList = ['Welcome', 'Hi', 'Hello']
+
+  print('Hi' in myList)
+  print('Hi' not in myList)
+
+  # Saída:
+  # True
+  # False
+  ```
+
+### Truque da atribuição múltipla
+
++ Atribuição múltipla é um truque para atribuir uma variável única para um item em uma lista;
++ Exemplo:
+  ```atribMult
+  myList = ['Water', 'Apple', 'Pencil']
+
+  fruit = myList[1]
+  print(fruit)
+
+  # Saída:
+  # Apple
+  ```
++ Exemplo 2:
+  ```atribMult2
+  myList = ['Marie', 'Apple', 'Pencil']
+
+  human,fruit,objecT = myList
+
+  print(human)
+  print(fruit)
+  print(objecT)
+
+  # Saída:
+  # Marie
+  # Apple
+  # Pencil
+  ```
++ A quantidade de variáveis tem que ser **exatamente** iguais ao número total de itens na lista, *nem maior nem menor*.
+
+## Operadores de atribuição expandidos
+
++ Com frequencia usamos variáveis para armazenar um valor e usarmos ela para alguma expressão;
++ Um exemplo de uso de variável é:
+  ```opeExpand
+  myVar = 10
+  myVar = myVar + 1
+  print(myVar)
+
+  # Saída:
+  # 11
+  ```
++ Podemos simplicar essa expressão 'myVar = myVar + 1' usando os operadores de atribuição expandidos. Exemplo:
+  ```opeExpand
+  myVar = 10
+  myVar += 1
+  print(myVar)
+
+  # Saída:
+  # 11
+  ```
++ Tipos de Operadores de atribuição expandidos:
+
+  |Instrução de atribuição expandida|Instrução de atribuição equivalente|
+  |                ---              |                 ---               |
+  |          spam += 1              |        spam = spam + 1            |
+  |          spam -= 1              |        spam = spam - 1            |
+  |          spam *= 1              |        spam = spam * 1            |
+  |          spam /= 1              |        spam = spam / 1            |
+  |          spam %= 1              |        spam = spam % 1            |
+
++ O operador += pode fazer concatenação de strings e lista, exemplos:
+  ```opeExpandStrings+=
+  myVar = 'Hello'
+  myVar += ' World'
+  print(myVar)
+  
+  # Saída:
+  # Hello World
+  ```
+
+  ```opeExpandList+=
+  myVar = ['Hello', 'World', 'OK']
+  myVar += ['Test']
+  print(myVar)
+
+  # Saída:
+  # ['Hello', 'World', 'OK', 'Test']
+  ```
+
++ O operador *= pode fazer a repetição de listas e strings, exemplos:
+  ```opeExpandList*=
+  myVar = ['Hello', 'World', 'OK']
+  myVar *= 2
+  print(myVar)
+
+  # Saída:
+  # ['Hello', 'World', 'OK', 'Hello', 'World', 'OK']
+  ```
+
+  ```opeExpandStrings*=
+  myVar = 'Hello'
+  myVar *= 2
+  print(myVar)
+
+  # Saída:
+  # HelloHello
+  ```
+
+## Metódos

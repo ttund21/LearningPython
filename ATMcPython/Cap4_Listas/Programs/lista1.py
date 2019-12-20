@@ -11,7 +11,7 @@ while True:
     if cname == '':
         break
     else:
-        name = name + [cname]
+        name += [cname]
 
 for i in range(len(name)):
     print(f'{i + 1}º Registed Names: {name[i]}')

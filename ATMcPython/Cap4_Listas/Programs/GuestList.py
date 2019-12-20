@@ -6,7 +6,7 @@ while True:
     if rnames == '':
         break
     else:
-        names = names + [rnames]
+        names += [rnames]
 
 print('\nYour guest are:')
 for i in range(len(names)):
