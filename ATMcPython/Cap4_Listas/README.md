@@ -439,3 +439,164 @@
   ```
 
 ## Tipos semelhantes a listas: strings e tuplas
+
++ Lista não são o único valor que representa uma sequencia ordenada de valores;
++ String é considerado também uma sequencia ordenada de caracteres;
++ Por exemplo na string podemos usar o 'in ou not in', loops com o for, indexação , etc;
++ Exemplo:
+  ```stringlista
+  name = 'banana'
+
+  print(name[-2])
+  print(name[0:4])
+  print('a' in name)
+
+  for i in name:
+  	print(i)
+
+  # Saída:
+  # n
+  # bana
+  # True
+  # b
+  # a
+  # n
+  # a
+  # n
+  # a
+  ```
+
+### Tipos de dados mutáveis e imutáveis
+
++ Uma grande diferença entre string e lista, é que lista é um valor mutável e string imutável;
++ Mutável: ele pode ter valor adicionado, removido ou alterados;
++ Imutável: não pode ser alterado;
++ Se tentamos adicionar um valor à string dará um erro:
+  ```stringerror
+  name = 'pydhon'
+
+  name[2] = 't'
+
+  print(name)
+
+  # Erro:
+  # TypeError: 'str' object does not support item assignment
+  ```
++ O "único jeito" de mutar uma string é criando uma nova variável e referenciando a antiga com o slice, exemplo:
+  ```mutarstring
+  name = 'pydhon'
+
+  newName = name[0:2] + 't' + name[3:6]
+
+  print(newName)
+
+  # Saída:
+  # python
+  ```
++ Lembrando alterar a lista é diferente de renovar a variável, exemplo:
+  ```renoVar
+  name = ['pydhon', 'python', 'testing']
+
+  name = ['C', 'C++', 'C#']
+
+  print(name)
+
+  # Saída:
+  # ['C', 'C++', 'C#']
+  ```
++ O código acima não está mutando a lista, e sim sobrepondo a variável 'name';
++ Um exemplo de mutação de variável:
+  ```birlHoraDoShowPorra
+  num = [0, 1, 2]
+
+  for i in range(len(num) -1, -1, -1):
+  	del num[i]
+
+  for i in range(3, 6): 
+  	num.append(i)
+
+  print(num)
+
+  # Saída:
+  # [3, 4, 5]
+  ```
++ Agora sim a lista foi modificada em vez de sobrescrita, foi apagada com o 'del' todos os itens e adicionado com o append() os outros itens.
+
+### Tipo de dado tupla
+
++ Tupla é praticamente uma lista imutável;
++ Tuplas são declaradas quase do mesmo jeito das lista só que em vez de usar os colchetes, [], usamos parênteses, (), exemplo:
+  ```tupla
+  tupla = (0, 1, 2)
+
+  print(tupla)
+  del tupla[0]
+
+  # Saída:
+  # (0, 1, 2)
+  # TypeError: 'tuple' object doesn't support item deletion
+  ```
++ Caso queira adicionar apenas um valor na tupla, adicione uma vírgula após o item exemplo:
+  ```tuplaumitem
+  print(type((1)))
+  print(type((1,)))
+
+  # Saída:
+  # <class 'int'>
+  # <class 'tuple'>
+  ```
++ Resumindo usaremos uma tupla quando a intenção é por um valor imutável no código.
+
+### Convertendo tipos com as funções list() e tuple()
+
++ Assim como int(), str() e float() retornam um valor que condiz com seu tipo de dado, list() e tuple() são a mesma coisa, exemplo:
+  ```convertlisttuple
+  lisT = ['Water', 'Apple', 'Mango']
+  print(lisT)
+  print(type(lisT))
+
+  lisT = tuple(lisT)
+  print(lisT)
+  print(type(lisT))
+
+  # Saída:
+  # ['Water', 'Apple', 'Mango']
+  # <class 'list'>
+  # ('Water', 'Apple', 'Mango')
+  # <class 'tuple'>
+  ```
+
+## Referências
+
++ Como já visto é possivel armazenar valores em uma variável, exemplo:
+  ```referenciaex
+  spam = [0,1,2]
+  che = spam
+  spam = [3,4,5]
+  print(spam)
+  print(che)
+  
+  # Saída:
+  # [3, 4, 5]
+  # [0, 1, 2]
+  ```
++ No código acima criamos a variavel *spam* com o valor [0,1,2] e atribuimos o valor de *spam* para *che* (che = spam), logo após na linha abaixo (spam = [3,4,5]) houve uma quebra de referência, pois como já dito que alterar uma lista é diferente renovar uma variável, então o valor inicial foi destruído perdendo assim a referência da lista inicial, e finalizando mostrando valores distintos.
++ Um exemplo de referência:
+  ```referenciaex2
+  spam = [0,1,2]
+  che = spam
+  spam.append(3)
+  spam.append(4)
+  spam.append(5)
+  print(spam)
+  print(che)
+
+  # Saída:
+  # [0, 1, 2, 3, 4, 5]
+  # [0, 1, 2, 3, 4, 5]
+  ```
++ Agora diferente do último exemplo, o valor da lista foi alterado e não sobreposto, preservando assim a referência da lista;
+
+
+
+
