@@ -10,3 +10,40 @@
 #       FGTS (11%)                      : R$  121,00
 #       Total de descontos              : R$  165,00
 #       Salário Liquido                 : R$  935,00
+
+def liqui(sBruto):
+    inss = (sBruto * 10)/100
+    fgts = (sBruto * 11)/100
+    if sBruto <= 900:
+        ir = 0
+        irPerc = 'Isento'
+        desc = inss + fgts + ir
+        sLiquido = sBruto - fgts - inss
+    elif sBruto <= 1500:
+        ir = (sBruto * 5)/100
+        irPerc = '5%'
+        desc = inss + fgts + ir
+        sLiquido = sBruto - fgts - inss - ir
+    elif sBruto <= 2500:
+        ir = (sBruto * 10)/100
+        irPerc = '10%'
+        desc = inss + fgts + ir
+        sLiquido = sBruto - fgts - inss - ir
+    else:
+        ir = (sBruto * 20)/100
+        irPerc = '20%'
+        desc = inss + fgts + ir
+        sLiquido = sBruto - fgts - inss - ir
+    
+    return ('\nSalário Bruto: '  + str(sBruto) \
+            + '\nIR(' + irPerc + '): '  + str(ir) \
+            + '\nINSS(10%): '  + str(inss) \
+            + '\nFGTS(11%): '  + str(fgts) \
+            + '\nTotal de descpntos: ' + str(desc) \
+            + '\nSalario Líquido: ' + str(sLiquido))
+
+resp = liqui(float(input('Salário Bruto: ')))
+print(resp)
+
+
+

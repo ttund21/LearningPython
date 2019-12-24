@@ -21,7 +21,7 @@
 
 9. Faça um Programa que leia três números e mostre-os em ordem decrescente. FEITO
 
-10. Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+10. Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso. FEITO
 
 11. As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa que calculará os reajustes.
   + Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
@@ -32,14 +32,14 @@
     + o salário antes do reajuste;
     + o percentual de aumento aplicado;
     + o valor do aumento;
-    + o novo salário, após o aumento.
+    + o novo salário, após o aumento. FEITO
 
 12. Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.
   + Desconto do IR:
     + Salário Bruto até 900 (inclusive) - isento
     + Salário Bruto até 1500 (inclusive) - desconto de 5%
     + Salário Bruto até 2500 (inclusive) - desconto de 10%
-    + Salário Bruto acima de 2500 - desconto de 20% Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220.
+    + Salário Bruto acima de 2500 - desconto de 20% Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220. FEITO
         ```12 
          Salário Bruto: (5 * 220)        : R$ 1100,00
         (-) IR (5%)                     : R$   55,00  
