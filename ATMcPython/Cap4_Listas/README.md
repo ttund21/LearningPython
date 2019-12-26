@@ -595,7 +595,56 @@
   # [0, 1, 2, 3, 4, 5]
   # [0, 1, 2, 3, 4, 5]
   ```
-+ Agora diferente do último exemplo, o valor da lista foi alterado e não sobreposto, preservando assim a referência da lista;
++ Listas tem um comportamento diferente com relação à variável, pois não se atribui uma lista à uma variável e sim uma **referência** da lista, então basicamente no código acima acontece isso atribuimos uma *referência à lista* para a variável 'spam' e logo após passamos a mesma referência para a variável 'che';
++ *Referência é um valor que aponta para uma porção de dados*;
+
+### Passando referências
+
++ Quando uma função é chamada, os valores dos argumentos são copiados para as variáveis referentes aos parâmetros,no caso da lista e do dicionário é feita uma copia da referência que será usada no parâmetro da função;
++ Exemplo:
+  ```refefunc
+  def test(a):
+  	a.append('Hello')
+    
+  op = [1,2,3]
+  test(op)
+  print(op)
+
+  # Saída:
+  # [1, 2, 3, 'Hello']
+  ```
++ Observe que uma **variável global** foi alterada através de um escopo local, isso acontece pois apesar de 'test()' e 'op' estarem em escopos diferentes eles conseguem fazer referência a mesma lista;
++ Um exemplo com um número inteiro aonde não referência:
+  ```refefuncerro
+  def test(a):
+  	op = 4
+    
+  op = 1
+  test(op)
+  print(op)
+
+  # Saída:
+  # 1
+  ```
+
+### Funções copy() e deepcopy() do módulo copy
+
++ Essas funções são um bom jeito para "burlar" a referência de uma lista e impedir que o valor seja alterado, um exemplo usando a função *copy()* que é usada para criar copiar um valor:
+  ```copy
+  import copy
+
+  list1 = [1, 2, 3]
+  list2 = copy.copy(list1)
+  list2[1] = 8
+  print(list1)
+  print(list2)
+
+  # Saída:
+  # [1, 2, 3]
+  # [1, 8, 3]
+  ```
++ Veja que não houve uma cópia da referência, o *copy()* apenas copiou o valor da 'list1', basicamente agora foi criada duas listas diferentes;
++ O *deepcopy()* copiará recursivamente a lista;
 
 
 

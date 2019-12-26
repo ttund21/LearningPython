@@ -1,0 +1,72 @@
+# Exercícios práticos
+
+1. O que é []?
+R: Colchetes que simbolizam uma lista vazia.
+
+
+2. Como você atribuiria o valor 'hello' como o terceiro valor de uma lista armazenada em uma variável chamada spam? (Suponha que spam contenha [2, 4, 6, 8, 10].)
+R: spam.insert(2, 'hello')
+
+
+## Para as três perguntas a seguir, vamos supor que spam contenha a lista ['a', 'b', 'c', 'd'].
+
+3. Para que valor spam[int(int('3' * 2) / 11)] é avaliado?
+R: d.
+
+
+4. Para que valor spam[-1] é avaliado?
+R: d.
+
+
+5. Para que valor spam[:2] é avaliado?
+R: a, b.
+
+
+## Para as três perguntas a seguir, vamos supor que bacon contenha a lista [3.14, 'cat', 11, 'cat', True].
+
+6. Para que valor bacon.index('cat') é avaliado?
+R: 1.
+
+
+7. Como bacon.append(99) altera o valor de lista em bacon?
+R: [3.14, 'cat', 11, 'cat', True, 99]
+
+
+8. Como bacon.remove('cat') altera o valor de lista em bacon?
+R: [3.14, 11, 'cat', True]
+
+
+9. Quais são os operadores para concatenação de lista e para repetição de lista?
+R: Concatenção é o + e repetição é o *.
+
+
+10. Qual é a diferença entre os métodos de lista append() e insert()?
+R: O append() adiciona um valor ao final da lista e o insert() você consegue passar um argumento para inserir o valor em qualquer posição.
+
+
+11. Quais são as duas maneiras de remover valores de uma lista?
+R: Usando o remove() e outra é del.
+
+
+12. Nomeie alguns aspectos em relação aos quais os valores de lista são semelhantes aos valores de string.
+R: Quanto lista como string são uma sequencia de valores e podem ser medidos a quantidade de valores com len().
+
+
+13. Qual é a diferença entre listas e tuplas?
+R: Listas são mutáveis e tuplas são imutáveis. 
+
+
+14. Como você deve digitar o valor de uma tupla que contenha somente o valor inteiro 42?
+R: (42,)
+
+
+15. Como podemos obter a forma de tupla de um valor de lista? Como podemos obter a forma de lista de um valor de tupla?
+R: Usando o converso list(). Usando o conversor tuple().
+
+
+16. As variáveis que “contêm” valores de lista não contêm realmente as listas diretamente. O que elas contêm em seu lugar?
+R: Contém a referência para a lista.
+
+
+17. Qual é a diferença entre copy.copy() e copy.deepcopy()?
+R: O copy() faz uma copia superficial e deepcopy() faz uma copia recursiva.
