@@ -2,4 +2,14 @@
 #   Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
 #   Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
 
+saque = int(input('Valor do Saque: '))
 
+if saque >= 10 and saque <= 600:
+    nota100 = saque // 100
+    nota50 = (-(nota100 * 100) + saque) // 50 
+    nota10 = (-(nota100 * 100) - (nota50 * 50) + saque) // 10
+    nota5 = (-(nota100 * 100) - (nota50 * 50) - (nota10 * 10) + saque) // 5
+    nota1 = (-(nota100 * 100) - (nota50 * 50) - (nota10 * 10) - (nota5 * 5) + saque) // 1
+    print(f'Para sacar { saque } reais, o programa fornece {nota100} de cem, {nota50} de cinquenta, {nota10} de dez, {nota5} de cinco e {nota1} de um. ')
+else:
+    print('Valor Inválido!')
