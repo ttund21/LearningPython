@@ -157,4 +157,44 @@
   # {'R': 1, 'e': 14, 'v': 2, 'l': 6, 'a': 10, 't': 12, 'i': 10, 'o': 6, 'n': 10, ' ': 28, '2': 1, '1': 1, ':': 1, '6': 1, '.': 3, 'I': 2, 'm': 3, 'A': 1, 'p': 1, 'h': 8, 'd': 3, 'O': 1, 'g': 4, ',': 2, 'b': 1, 'w': 2, 'u': 2, 's': 2, 'r': 3, 'f': 6, 'y': 1}
   ```
 
+## Utilizando estruturas de dados para modelar objetos do mundo real
 
++ Podemos tipos de dados como listas e dicionários para modelar estruturas do mundo real em um código.
+
+### Um tabuleiro de jogo da velha
+
++ Iremos usar estrutura de dados para modelar um jogo da velha;
++ Usaremos de 1 a 9 para representar as noves casas do tabuleiro do jogo da velha, exemplo:
+  ```jogoDaVelha
+  1|2|3
+  -+-+-
+  4|5|6
+  -+-+-
+  7|8|9
+  ```
++ Agora com o dicionário vamos modelar essa representação, exemplo:
+  ```diciJogoDaVelha
+  jgDaVelha = {1:' ', 2:' ', 3:' ',
+        4:' ', 5:' ', 6:' ',
+        7:' ', 8:' ', 9:' '}
+  ```
++ Agora para finalizar a modelagem precisamos criar um bloco de código que exiba o nosso tabuleiro, exemplo:
+  ```modelJogoDaVelha
+  def jogo(game):
+  	print(game[1] + '|' + game[2] + '|' + game[3])
+  	print('-+-+-')
+  	print(game[4] + '|' + game[5] + '|' + game[6])
+  	print('-+-+-')
+  	print(game[7] + '|' + game[8] + '|' + game[9])
+
+  jgDaVelha = {1:' ', 2:' ', 3:' ',
+        4:' ', 5:' ', 6:' ',
+        7:' ', 8:' ', 9:' '}
+  
+  jogo(jgDaVelha)
+  ```
++ Então criamos a estrutura de dados para representar o tabuleiro e implementamos uma função para interpretar essa estrutura;
++ Agora para finalizar o jogo, só é necessário implementar as regras e a entrada do jogador, a base da estrutura já foi feita;
++ O jogo finalizado está no **diretório Programs** deste capítulo.
+
+### Dicionário e listas aninhados

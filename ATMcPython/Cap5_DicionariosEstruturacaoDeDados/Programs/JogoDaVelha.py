@@ -1,16 +1,16 @@
 def ilustracao():
     print('1' + '|' + '2' + '|' + '3')
-    print('------')
+    print('-+-+-')
     print('4' + '|' + '5' + '|' + '6')
-    print('------')
+    print('-+-+-')
     print('7' + '|' + '8' + '|' + '9')
 
 
 def jogo(game):
     print(game[1] + '|' + game[2] + '|' + game[3])
-    print('------')
+    print('-+-+-')
     print(game[4] + '|' + game[5] + '|' + game[6])
-    print('------')
+    print('-+-+-')
     print(game[7] + '|' + game[8] + '|' + game[9])
 
 def ganhador(game):
