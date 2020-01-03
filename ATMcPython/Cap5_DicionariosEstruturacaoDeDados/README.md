@@ -195,6 +195,9 @@
   ```
 + Então criamos a estrutura de dados para representar o tabuleiro e implementamos uma função para interpretar essa estrutura;
 + Agora para finalizar o jogo, só é necessário implementar as regras e a entrada do jogador, a base da estrutura já foi feita;
-+ O jogo finalizado está no **diretório Programs** deste capítulo.
++ O jogo finalizado está no diretório **./Programs** deste capítulo.
 
 ### Dicionário e listas aninhados
+
++ A medida que fomos modelando objetos mais complexos será necessário dicionários ou listas que contenham outros dicionários ou listas;
++ Lembrando que **listas** são uteis para uma **serie ordenada de valores**, e **dicionário** são uteis para **associar chaves e valores**; 

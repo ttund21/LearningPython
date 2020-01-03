@@ -1,0 +1,28 @@
+Exercícios práticos
+
+1. Qual é a aparência do código para criar um dicionário vazio?
+R: {}.
+
+2. Qual é a aparência de um valor de dicionário com uma chave igual a 'foo' e um valor 42?
+R: {foo:42}.
+
+3. Qual é a principal diferença entre um dicionário e uma lista?
+R: Lista é uma serie de valores ordenados e dicionário é uma serie de chave-valor.
+
+4. O que acontecerá se você tentar acessar spam['foo'] se spam for igual a {'bar': 100}?
+R: KeyError.
+
+5. Se um dicionário estiver armazenado em spam, qual será a diferença entre as expressões 'cat' in spam e 'cat' in spam.keys()?
+R: Diferença nenhuma, pois tanto spam e o spam.keys irá checar se existe 'cat' nas chaves dos dicionários.
+
+6. Se um dicionário estiver armazenado em spam, qual será a diferença entre as expressões 'cat' in spam e 'cat' in spam.values()?
+R: No spam irá procurar nas chaves e spam.values irá procurar nos valores.
+
+7. Qual seria um atalho para o código a seguir?
+if 'color' not in spam:
+	spam['color'] = 'black'
+
+R: spam.setdefault('color', 'black')
+
+8. Qual módulo e qual função podem ser usados para fazer uma “apresentação elegante” (pretty print) dos valores do dicionário?
+R: pprint.
