@@ -14,16 +14,16 @@
   ```
 + Dica: você pode utilizar um loop for para percorrer todas as chaves de um dicionário.
   ```inventario2
-  # inventory.py
-  stuff = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
-
   def displayInventory(inventory):
-  	print("Inventory:")
-  	item_total = 0
-  	for k, v in inventory.items():
-  		print(str(v) + ' ' + k)
-  		item_total += v
-  	print("Total number of items: " + str(item_total))
-  
-  displayInventory(stuff)
+  	total = 0
+  	print('Inventory:')
+  	for item, amount in inventory.items():
+        	total += amount
+        	print(f'{amount}  {item}')
+  	print(f'Total number of items: {total}')
+
+
+  inventory = {'rope':1, 'torch':6, 'gold coin':42, 'dagger':1, 'arrow':12}
+
+  displayInventory(inventory)
   ```
