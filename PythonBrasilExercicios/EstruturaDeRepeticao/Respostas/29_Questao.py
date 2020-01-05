@@ -5,3 +5,9 @@
 #   ...
 #   50 - R$ 99.50
 
+preco = 0
+
+print('Lojas Quase Dois - Tabela de preços')
+for i in range(50):
+    preco += 1.99
+    print(f'{i + 1} - R${round(preco,2)}')
