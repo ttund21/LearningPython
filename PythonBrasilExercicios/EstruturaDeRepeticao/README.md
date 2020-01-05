@@ -125,14 +125,14 @@
   ```
   Obs: Você deve verificar se o usuário não digitou o final menor que o inicial. FEITO
 
-37. Uma academia deseja fazer um senso entre seus clientes para descobrir o mais alto, o mais baixo, a mais gordo e o mais magro, para isto você deve fazer um programa que pergunte a cada um dos clientes da academia seu código, sua altura e seu peso. O final da digitação de dados deve ser dada quando o usuário digitar 0 (zero) no campo código. Ao encerrar o programa também deve ser informados os códigos e valores do clente mais alto, do mais baixo, do mais gordo e do mais magro, além da média das alturas e dos pesos dos clientes
+37. Uma academia deseja fazer um senso entre seus clientes para descobrir o mais alto, o mais baixo, a mais gordo e o mais magro, para isto você deve fazer um programa que pergunte a cada um dos clientes da academia seu código, sua altura e seu peso. O final da digitação de dados deve ser dada quando o usuário digitar 0 (zero) no campo código. Ao encerrar o programa também deve ser informados os códigos e valores do clente mais alto, do mais baixo, do mais gordo e do mais magro, além da média das alturas e dos pesos dos clientes. FEITO
 
 38. Um funcionário de uma empresa recebe aumento salarial anualmente: Sabe-se que:
   + Esse funcionário foi contratado em 1995, com salário inicial de R$ 1.000,00;
   + Em 1996 recebeu aumento de 1,5% sobre seu salário inicial;
-  + A partir de 1997 (inclusive), os aumentos salariais sempre correspondem ao dobro do percentual do ano anterior. Faça um programa que determine o salário atual desse funcionário. Após concluir isto, altere o programa permitindo que o usuário digite o salário inicial do funcionário.
+  + A partir de 1997 (inclusive), os aumentos salariais sempre correspondem ao dobro do percentual do ano anterior. Faça um programa que determine o salário atual desse funcionário. Após concluir isto, altere o programa permitindo que o usuário digite o salário inicial do funcionário. FEITO
 
-39. Faça um programa que leia dez conjuntos de dois valores, o primeiro representando o número do aluno e o segundo representando a sua altura em centímetros. Encontre o aluno mais alto e o mais baixo. Mostre o número do aluno mais alto e o número do aluno mais baixo, junto com suas alturas.
+39. Faça um programa que leia dez conjuntos de dois valores, o primeiro representando o número do aluno e o segundo representando a sua altura em centímetros. Encontre o aluno mais alto e o mais baixo. Mostre o número do aluno mais alto e o número do aluno mais baixo, junto com suas alturas. FEITO
 
 40. Foi feita uma estatística em cinco cidades brasileiras para coletar dados sobre acidentes de trânsito. Foram obtidos os seguintes dados:
   + Código da cidade;
@@ -140,7 +140,7 @@
   + Número de acidentes de trânsito com vítimas (em 1999). Deseja-se saber:
   + Qual o maior e menor índice de acidentes de transito e a que cidade pertence;
   + Qual a média de veículos nas cinco cidades juntas;
-  + Qual a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio.
+  + Qual a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio. FEITO
 
 41. Faça um programa que receba o valor de uma dívida e mostre uma tabela com os seguintes dados: valor da dívida, valor dos juros, quantidade de parcelas e valor da parcela.
   Os juros e a quantidade de parcelas seguem a tabela abaixo:
