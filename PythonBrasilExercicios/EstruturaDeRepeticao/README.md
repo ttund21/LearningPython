@@ -143,7 +143,7 @@
   + Qual a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio. FEITO
 
 41. Faça um programa que receba o valor de uma dívida e mostre uma tabela com os seguintes dados: valor da dívida, valor dos juros, quantidade de parcelas e valor da parcela.
-  Os juros e a quantidade de parcelas seguem a tabela abaixo:
+  Os juros e a quantidade de parcelas seguem a tabela abaixo: FEITO
   ```41
   Quantidade de Parcelas  % de Juros sobre o valor inicial da dívida
   1       0
@@ -158,7 +158,7 @@
   R$ 1.150,00     150             6                       R$    191,67
   ```
 
-42. Faça um programa que leia uma quantidade indeterminada de números positivos e conte quantos deles estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. A entrada de dados deverá terminar quando for lido um número negativo.
+42. Faça um programa que leia uma quantidade indeterminada de números positivos e conte quantos deles estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. A entrada de dados deverá terminar quando for lido um número negativo. FEITO
 
 43. O cardápio de uma lanchonete é o seguinte:
   ```43
