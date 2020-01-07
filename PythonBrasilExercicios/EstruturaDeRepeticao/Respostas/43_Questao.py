@@ -8,18 +8,25 @@
 #  Refrigerante    105     R$ 1,00
 #  Faça um programa que leia o código dos itens pedidos e as quantidades desejadas. Calcule e mostre o valor a ser pago por item (preço * quantidade) e o total geral do pedido. Considere que o cliente deve informar quando o pedido deve ser encerrado.
 
-cardapio = {100:1.20, 101:1.30, 102:1.50, 103:1.20, 104:1.30, 105:1.0}
-carrinho = []
+def exibir(cod, menu, quant):
+    for i in range(len(cod)):
+        print(f" ")
+
+cardapio = {100:{'nome':'Cachorro Quente', 'preco':1.20}, 101:{'nome':'Bauru Simples', 'preco':1.30}, 102:{'nome':'Bauru com ovo', 'preco':1.50}, 103:{'nome':'Hambúrger', 'preco':1.20}, 104:{'nome':'Cheeseburger', 'preco':1.30}, 105:{'nome':'Refrigerante', 'preco':1.00}}
+codigo = []
+quant = []
 
 while True:
     pedido = int(input('Código(0 para encerrar): '))
     if pedido == 0:
         print('Encerrado!')
         break
-    quantidade = int(input('Quantidade: '))
-    carrinho.append(cardapio[pedido] * quantidade)
+    elif pedido not in cardapio:
+        print('Código não está no cardápio!')
+        continue
+    else:
+        quantidade = int(input('Quantidade: '))
+        codigo.append(pedido)
+        quant.append(quantidade)
 
-print(f'Código ')
-
-
-
+exibir(codigo, cardapio, quant)
