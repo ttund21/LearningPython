@@ -22,12 +22,8 @@ def exibir():
 
 def porcentagem(eleitores, candidatos):
     print('Resultado'.center(60, '-'))
-    print(f'''Meirelles --> Total de Votos: { candidatos[1]['votos'] } , Porcentagem: { round((candidatos[1]['votos'] / eleitores) * 100, 2) } %
-Bolsonaro --> Total de Votos: { candidatos[2]['votos'] } , Porcentagem: { round((candidatos[2]['votos'] / eleitores) * 100, 2) } %
-Amoedo --> Total de Votos: { candidatos[3]['votos'] } , Porcentagem: {round((candidatos[3]['votos'] / eleitores) * 100, 2) } %
-Haddad --> Total de Votos: { candidatos[4]['votos'] } , Porcentagem: { round((candidatos[4]['votos'] / eleitores) * 100, 2) } %
-Voto Nulo -->  Total de Votos: { candidatos[5]['votos'] } , Porcentagem: { round((candidatos[5]['votos'] / eleitores) * 100, 2) } %
-Voto em Branco --> Total de Votos: { candidatos[6]['votos'] } , Porcentagem: { round((candidatos[6]['votos'] / eleitores) * 100, 2) } %''')
+    for i in range(1, 7):
+        print(f"{candidatos[i]['nome']} --> Total de Votos: { candidatos[i]['votos'] } , Porcentagem: { round((candidatos[i]['votos'] / eleitores) * 100, 2) } %")
     print(''.center(60, '-'))
     print(f"Total de Votos: {eleitores}")
 
@@ -55,8 +51,3 @@ while True:
         candidatos[voto]['votos'] += 1
 
 porcentagem(eleitores, candidatos)
-
-
-
-
-
