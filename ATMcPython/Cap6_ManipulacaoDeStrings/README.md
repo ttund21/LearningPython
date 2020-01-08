@@ -233,3 +233,110 @@
   ``` 
 
 ### Justificando texto com rjust(), ljust() e center()
+
+#### rjust()
+
++ Usado para justificar um texto a direita, exemplo:
+  ```rjust
+  print('hello'.rjust(20, '='))
+
+  # Saída:
+  # ===============hello
+  ```
+
+#### ljust()
+
++ Justifica o texto a esquerda, exemplo:
+  ```ljust
+  print('hello'.ljust(20, '='))
+  
+  # Saída:
+  # hello===============
+  ```
+
+#### center()
+
++ Justifica o texto para o meio, exemplo:
+  ```center
+  print('hello'.center(20, '='))
+  
+  # Saída:
+  # =======hello========
+  ```
+
+### Removendo espaços em branco com strip(), rstrip() e lstrip()
+
+#### lstrip()
+
++ Remove espaços em branco do lado esquerdo, exemplo:
+  ```lstrip
+  h = '       Hello World        '
+
+  print(h.rstrip())
+
+  # Saída:
+  # Hello World 
+  ```
+
+#### rstrip()
+
++ Remove espaços em branco do lado direito, exemplo:
+  ```rstrip
+  h = '       Hello World        '
+
+  print(h.rstrip())
+
+  # Saída:
+  #        Hello World
+  ```
+
+#### strip()
+
++ Remove espaços em branco dos dois lados, exemplo:
+  ```strip
+  h = '       Hello World        '
+
+  print(h.strip())
+
+  # Saída:
+  # Hello World
+  ```
+
++ Todas as funções strip() aceitam argumento do tipo string que especificará qual caractere vai ser removido, exemplo:
+  ```charStrip
+  h ='Hello World'
+
+  print(h.strip('World'))
+
+  # Saída:
+  # Hello
+  ```
+
+### Copiando e colando strings com o módulo pyperclip
+
++ Primeiro passo para usar este módulo é instalar ele no seu pc:
+  + sudo pip install pyperclip
++ Após instalção basta importa-lo e usa-lo;
++ O módulo *pyperclip* tem funções para trabalhar com sua área de transferencia do seu computador;
+
+#### pyperclip.copy()
+
++ Esta função copia o dado para sua área de transferencia, exemplo:
+  ```copy
+  import pyperclip
+
+  pyperclip.copy('Hello')
+
+  # Hello foi copia do para sua área de transferencia
+  ```
+
+#### pyperclip.paste()
+
++ Esta função cola o dado que está na sua área de transferencia, exemplo:
+  ```paste
+  import pyperclip
+
+  print(pyperclip.paste())
+
+  # Será colado no programa o que está na sua area de transferencia
+  ```

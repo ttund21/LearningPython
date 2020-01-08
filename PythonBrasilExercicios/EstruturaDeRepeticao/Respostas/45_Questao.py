@@ -31,8 +31,7 @@ Total de Alunos: {alunos}
 Média de Nota da Turma: {round(sum(notas)/alunos, 2)}''')
     print(''.center(40, '-'))
 
-def profGabarito():
-    letras = ('A', 'B', 'C', 'D', 'E')
+def profGabarito(letras):
     global gabarito
     gabarito = {}
     for i in range(1, 11):
@@ -48,12 +47,13 @@ def profGabarito():
 
 from random import choice
 
-profGabarito()
 
 respostas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 letras = ('A', 'B', 'C', 'D', 'E')
 notas = []
 alunos = 0
+
+profGabarito(letras)
 
 while True:
     acertos = 0
