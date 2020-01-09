@@ -8,16 +8,21 @@
 
 dividendo = 1
 divisor = 1
+resultado = 0
 
 n = int(input('n: '))
 while True:
-    m = int(input('m:'))
-    if m % 2 == 0:
+    m = int(input('m: '))
+    if m % 2 == 0 or m < n:
         continue
     else:
         break
 
 
-for i in range(20):
+while dividendo != n and divisor != m:
+    resultado += dividendo/divisor
+    dividendo += 1
+    divisor += 2
 
+print(round(resultado, 2))
 
