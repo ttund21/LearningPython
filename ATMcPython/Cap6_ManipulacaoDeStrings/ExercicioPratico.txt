@@ -1,0 +1,46 @@
+Exercícios práticos
+
+1. O que são caracteres de escape?
+R: São que facilitam a entrada de um caractere que não podia está ali. 
+
+2. O que os caracteres de escape \n e \t representam?
+R: \n quebrade linha e \t tabulação.
+
+3. Como podemos inserir um caractere \ de barra invertida em uma string?
+R: \\
+
+4. O valor de string "Howl's Moving Castle" é uma string válida. Por que não há problema no fato de o caractere único de aspas simples na palavra Howl's não estar escapado?
+R: Pois foi usado aspas duplas para sinalizar string.
+
+5. Se não quiser colocar \n em sua string, como você poderá escrever uma string contendo quebras de linha?
+R: print(''' '''), usando aspas simples seis vezes.
+
+6. Para que valores as expressões a seguir são avaliadas?
+• 'Hello world!'[1]
+• 'Hello world!'[0:5]
+• 'Hello world!'[:5]
+• 'Hello world!'[3:]
+R: • 'e'
+   • 'Hello'
+   • 'Hello'
+   • 'lo world!'
+
+7. Para que valores as expressões a seguir são avaliadas?
+• 'Hello'.upper()
+• 'Hello'.upper().isupper()
+• 'Hello'.upper().lower()
+R: • 'HELLO'
+   • True
+   • 'hello'
+
+8. Para que valores as expressões a seguir são avaliadas?
+• 'Remember, remember, the fifth of November.'.split()
+• '-'.join('There can be only one.'.split())
+R: • ['Remember,', 'remember,', 'the', 'fifth', 'of', 'November.']
+   • 'There-can-be-only-one.'
+
+9. Quais métodos de string podem ser usados para justificar uma string à direita, à esquerda e para centralizá-la?
+R: rjust(), ljust() e center().
+
+10. Como podemos remover caracteres de espaços em branco no início e no fim de uma string?
+R: lstrip(), rstrip() e strip().
