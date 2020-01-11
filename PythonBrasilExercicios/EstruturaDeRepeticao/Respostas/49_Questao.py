@@ -9,20 +9,33 @@
 dividendo = 1
 divisor = 1
 resultado = 0
+exibir = []
 
-n = int(input('n: '))
 while True:
-    m = int(input('m: '))
+    try:
+        n = int(input('n: '))
+        break
+    except ValueError:
+        print('Valor Inválido')
+        continue
+
+while True:
+    try:
+        m = int(input('m: '))
+    except ValueError:
+        print('Valor Inválido')
+        continue
     if m % 2 == 0 or m < n:
         continue
     else:
         break
 
 
-while dividendo != n and divisor != m:
+while dividendo <= n and divisor <= m:
+    exibir.append(str(dividendo) + '/' + str(divisor))
     resultado += dividendo/divisor
     dividendo += 1
     divisor += 2
 
-print(round(resultado, 2))
+print(f"S = {' + '.join(exibir)}\nS = {round(resultado, 2)} ")
 

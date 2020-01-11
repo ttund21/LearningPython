@@ -253,6 +253,6 @@
   ```49
   S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m. 
   ```
-  Imprima no final a soma da série.
+  Imprima no final a soma da série. FEITO
 
-50. Sendo H= 1 + 1/2 + 1/3 + 1/4 + ... + 1/N, Faça um programa que calcule o valor de H com N termos.
+50. Sendo H= 1 + 1/2 + 1/3 + 1/4 + ... + 1/N, Faça um programa que calcule o valor de H com N termos. FEITO
