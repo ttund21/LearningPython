@@ -100,4 +100,43 @@
 
 #### Dominando caracteres acentuados (POSIX)
 
++ POSIX é um padrão internacional que define regras de intervalo;
++ Ele é divido em classes:
 
+| Classe POSIX  |    Similar    |          Significa               |
+|      ---      |      ---      |           ---                    |
+|   [:upper:]   | [A-Z]         |   Letras maiúsculas              |
+|   [:lower:]   | [a-z]         |   Letras minúsculas              |
+|   [:alpha:]   | [A-Za-z]      |   Maiúsculas/minúsculas          |
+|   [:alnum:]   | [A-Za-z0-9]   |   Letras e números               |
+|   [:digit:]   | [0-9]         |   Números                        |
+|   [:xdigit:]  | [0-9A-Fa-f]   |   Números hexadecimais           |
+|   [:punct:]   | [.,!?:...]    |   Sinais de pontuação            |
+|   [:blank:]   | [ \t]         |   Espaço e Tabulação             |
+|   [:space:]   | [ \t\n\r\f\v] |   Caracteres brancos             |
+|   [:cntrl:]   |               |   Caracteres de controle         |
+|   [:graph:]   | [^ \t\n\r\f\v |   Números                        |
+|   [:print:]   | [^\t\n\r\f\v] |   Números hexadecimais           |
+
++ Note que os colchetes fazem parte do POSIX, então para incluir ele numa lista ficaria *[[:lower:]]*, lembrando que *[:lower:]* POSIX puro, [[:lower:]] POSIX dentro de uma lista;
++ Exemplo:
+  ```telephone
+  Frase: Telefone de teste 3258-8795
+  ER: [[:digit:]-]
+
+  Saída: 3258-8795
+  ```
++ Resumo:
+  + Lista dar Match em quem ela conhece;
+  + Dentro da lista qualquer caractere é normal com exceção do hifen;
+  + Dentro da lista hifen é intervalo;
+  + Um hifen literal tem que ser o último da lista;
+  + Um ] literal tem que ser o primeiro da lista;
+  + Os intervalos respeitam a tabela ASCII.
+
+### Lista negada
+
++ Tudo que se aplica na lista, se aplica na lista negada;
++ Diferente da lista, lista negada dará Match com os caracteres diferentes do dentro dela;
++ Lista consiste em **[^0-9]**, parecido com a lista, só que após o colchete inicial vem um circunflexo;
++ 
