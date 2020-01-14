@@ -137,6 +137,63 @@
 ### Lista negada
 
 + Tudo que se aplica na lista, se aplica na lista negada;
-+ Diferente da lista, lista negada dará Match com os caracteres diferentes do dentro dela;
-+ Lista consiste em **[^0-9]**, parecido com a lista, só que após o colchete inicial vem um circunflexo;
-+ 
++ Diferente da lista, lista negada dará Match com os caracteres diferentes do que está dentro dela;
++ Lista negada consiste em **[^0-9]**, parecido com a lista, só que após o colchete inicial vem um circunflexo;
++ Para ignorar o **^** basta colocar ele em qualquer posição que não seja a primeira;
++ Exemplo:
+  ```listaNegada
+  Frase: 1234 lamplight PO box 9x ^
+  ER: [^[:digit:]^]
+
+  Saída: lamplight PO box 
+  ```
++ Resumo:
+  + Lista negada segue as regras de uma lista normal;
+  + Um ^ literal não pode ser o primeiro da lista;
+  + Classes POSIX também podem ser negadas.
+
+## Metacarecteres tipo Quantificador
+
++ São metacaracteres que ditão a quantidade de repetição que o caractere anterior pode ter.
+
+### Opcional
+
++ O metacaractere Opcional dita que se tiver tal caractere aceite e se não tiver também aceite;
++ Exemplo:
+  ```opcional
+  Frase: anda
+  ER: anda[rs]?
+
+  Saída: anda
+  ```
+#### Como ler uma ER
+
++ Primeiro lê-se uma ER da esquerda para direita, *átomo(caractere)* por átomo;
++ Segundo analisa-se as possibilidades;
++ No exemplo **fala[r!]** primeiro se lê f > a > l > a, depois analisa-se as possibildades, ou falar ou fala!.
+
++ Resumo:
+  + O opcional é opcional;
+  + Útil para procurar variações de palavras;
+  + Podemos tornar opicional caracteres e metacaracteres;
+  + Leia a ER átomo por átomo da esquerda para direita;
+  + Leia a ER, entenda e analise as possibilidades.
+
+### Asterisco
+
++ Um parecido com o opcional com a diferença que ele pode ter, não ter ou ter vários;
++ Exemplo:
+  ```asterisco
+  Frase: site www.google.cooooom
+  ER: w*.go*gle.co*m
+
+  Saída: www.google.cooooom
+  ```
++ Resumo:
+  + O asterisco repete em qualquer quantidade;
+  + Quantificadores são gulosos eles tentaram repetir o maior número de vezes possivel;
+  + O curinga .* é o tudo e o nada, qualquer coisa.
+
+### Mais
+
++
