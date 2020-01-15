@@ -46,7 +46,7 @@
 | Metacaractere |  Nome         |          Função                  |
 |      ---      |  ---          |           ---                    |
 |       \c      |  Escape       |   Torna literal o caractere c    |
-|       |       |  Ou           |   Ou um ou outro                 |
+|      \|       |  Ou           |   Ou um ou outro                 |
 |     (...)     |  Grupo        |   Delimita um grupo              |
 |     \1...\9   |  Retrovisor   |   Texto casado nos grupos 1..9   |
 
