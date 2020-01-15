@@ -184,10 +184,10 @@
 + Um parecido com o opcional com a diferença que ele pode ter, não ter ou ter vários;
 + Exemplo:
   ```asterisco
-  Frase: site www.google.cooooom
-  ER: w*.go*gle.co*m
+  Frase: www.gogle.com
+  ER: w*.go*gle.com[0-9]*
 
-  Saída: www.google.cooooom
+  Saída: www.gogle.com
   ```
 + Resumo:
   + O asterisco repete em qualquer quantidade;
@@ -196,4 +196,87 @@
 
 ### Mais
 
-+
++ Tem o fincionamento igual ao *asterisco*, com a diferença que não é mais opcional o átomo anterior;
++ Exemplo 1:
+  ```mais1
+  Frase: www.gogle.com
+  ER: w*.go*gle.com[0-9]+
+
+  Saída:
+  ```
++ Exemplo 2:
+  ```mais2
+  Frase: www.google.com
+  ER: w+.go+gle.com
+
+  Saída: www.google.com
+  ```
++ Resumo:
+  + O mais repete em qualquer quantidade, pelo menos uma vez;
+  + O mais é igual ao asterisco, só mais exigente.
+
+### Chaves{n, m}
+
++ Chaves é o quantitficador mais controlado aonde você consegue definir o número de repetições;
++ Exemplo:
+  ```chaves
+  Frase: www.google.com
+  ER: w{3}.go{2}gle.com
+
+  Saída: www.google.com
+  ```
++ Tabela de exemplos:
+
+|Metacaractere|               Repetições               |
+|     ---     |                  ---                   |
+|     {1, 3}  |    De 1 a 3                            |
+|     {3,}    |    Pelo menos 3 (3 ou mais)            |
+|     {0, 3}  |    Até 3                               |
+|     {3}     |    Exatamente 3                        |
+|     {1}     |    Exatamente 1                        |
+|     {0,1}   |    Zero ou 1 (igual ao opcional)       |
+|     {0,}    |    Zero ou mais (igual ao asterisco)   |
+|     {1,}    |    Um ou mais (igual o mais)           |
+
++ Resumo:
+  + Chaves são precisas;
+  + Você pode especificar um número exato, um mínimo, um máximo, ou uma faixa númerica;
+  + Com a chaves é possivel simular o: *, + e ?.
+
+## Metacaracteres tipo Âncora
+
++ São metacaracteres usados para marcar a posição.
+
+### Circunflexo
+
++ Usado no inicio de uma ER, serve para marcar o começo da linha;
++ Exemplo:
+  ```circunflexo
+  Frase: 123 www.google.com 456
+	 789 www.bing.com 123
+  ER: ^[0-9]
+
+  Saída: 1
+         7
+  ```
++ Resumo:
+  + Server para procurar palavras no começo da linha;
+  + Só é especial no começo da ER (e de uma lista).
+
+### Cifrão
+
++ Usado no final de uma ER é útil para marcar o fim de uma linha;
++ Exemplo:
+  ```cifrao
+  Frase: 123 www.google.com 456
+	 789 www.bing.com 123
+  ER: [0-9]$
+
+  Saída: 6
+         3
+  ```
++ Resumo:
+  + Serve para prucurar palavras no fim da linha;
+  + Só é especial no fim da ER.
+
+### Borda
