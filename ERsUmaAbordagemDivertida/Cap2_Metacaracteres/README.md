@@ -280,3 +280,70 @@
   + Só é especial no fim da ER.
 
 ### Borda
+
++ Usada para delimitar limites de uma palavra;
++ Exemplo:
+  ```borda
+  Frase: bom-dia dia melodia vadia
+  ER: \bdia\b
+
+  Saída: dia dia
+  ```
++ Resumo:
+  + Borda marca os limites de uma palavra;
+  + Útil para caçar palavras exatas.
+
+## Outros metacaracteres
+
+### Escape
+
++ Utilizado para tornar um metacaractere um caractere, ou seja, torna ele literal;
++ Exemplo:
+  ```Escape
+  Frase: CPF: 000.000.008-00
+  ER: [0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}
+
+  Saída: 000.000.008-00
+  ```
++ Resumo:
+  + O escape retira o poder do metacaractere;
+  + \* = [*] = asterisco literal;
+  + O escape escapa o escape, *\\*.
+
+### Ou
+
++ Usado para gerar alternativas, ou isso ou aquilo;
++ Exemplo:
+  ```ou
+  Frase: http://www.google.com.br
+         ftp://www.google.com.br
+         https://www.google.com.br
+  ER: ftp://|http://
+
+  Saída: http://
+         ftp://
+  ```
++ Resumo:
+  + O ou indica alternativas;
+  + Funciona em um caractere ou em vários;
+  + O grupo multiplica o poder do ou.
+
+### Grupo
+
++ Utilizado para agrupar caracteres;
++ Um dos metacaracteres mais importantes, pois com ele todos os outros tem seu poder aumentado;
++ Dentro de um grupo podemos ter caracteres, metacaracteres e também outros grupos;
++ Exemplo:
+  ```grupo1
+  Frase: CPF: 000.000.008-00
+  ER: ([0-9]{3}\.){2}[0-9]{3}-[0-9]{2}
+  
+  Saída: 000.000.008-00
+  ```
++ Podemos agrupar tudo que quisermos dentro de um grupo:
+
+|     Expressão    |           Casa com            |
+|        ---       |              ---              |
+|      (ha!)+      |    ha!, ha!ha!, ha!ha!ha!, ...   |
+|  (\.[0-9]){3}    |    0.8.9, .1.2.3, .7.7.7, ...   |
+|    ---    |    ---   |
