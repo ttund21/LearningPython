@@ -4,51 +4,51 @@
 
 + Nomes dos Metacaracteres:
 
-|Metacaractere|      Nome        |Metacaractere|      Nome         |
-|    ---      |      ---         |    ---      |       ---         |
-|     .       |     Ponto        |     ^       |    Circunflexo    |
-|     []      |     Lista        |     $       |    Cifrão         |
-|     [^]     |     Lista negada |     \b      |    Borda          |
-|     ?       |     Opcional     |     \       |    Escape         |
-|     *       |     Asterisco    |     |       |    Ou             |
-|     +       |     Mais         |     ()      |    Grupo          |
-|     {}      |     Chaves       |     \1      |    Retrovisor     |
+  |Metacaractere|      Nome        |Metacaractere|      Nome         |
+  |    ---      |      ---         |    ---      |       ---         |
+  |     .       |     Ponto        |     ^       |    Circunflexo    |
+  |     []      |     Lista        |     $       |    Cifrão         |
+  |     [^]     |     Lista negada |     \b      |    Borda          |
+  |     ?       |     Opcional     |     \       |    Escape         |
+  |     *       |     Asterisco    |     |       |    Ou             |
+  |     +       |     Mais         |     ()      |    Grupo          |
+  |     {}      |     Chaves       |     \1      |    Retrovisor     |
 
 ### Funções
 
 #### Representantes
 
-| Metacaractere |  Nome         |          Função                  |
-|      ---      |  ---          |           ---                    |
-|       .       |  Ponto        |   Um caractere qualquer          |
-|      [...]    |  Lista        |   Lista de caracteres            |
-|      [^...]   |  Lista Negada |   Lista de caracteres proibidos  |
+  | Metacaractere |  Nome         |          Função                  |
+  |      ---      |  ---          |           ---                    |
+  |       .       |  Ponto        |   Um caractere qualquer          |
+  |      [...]    |  Lista        |   Lista de caracteres            |
+  |      [^...]   |  Lista Negada |   Lista de caracteres proibidos  |
 
 #### Quantificadores
 
-| Metacaractere |  Nome         |          Função                  |
-|      ---      |  ---          |           ---                    |
-|       ?       |  Opcional     |   Zero ou um                     |
-|       *       |  Asterisco    |   Zero, um ou mais               |
-|       +       |  Mais         |   Um ou mais                     |
-|     {n,m}     |  Chaves       |   De n até m                     |
+  | Metacaractere |  Nome         |          Função                  |
+  |      ---      |  ---          |           ---                    |
+  |       ?       |  Opcional     |   Zero ou um                     |
+  |       *       |  Asterisco    |   Zero, um ou mais               |
+  |       +       |  Mais         |   Um ou mais                     |
+  |     {n,m}     |  Chaves       |   De n até m                     |
 
 #### Âncoras
 
-| Metacaractere |  Nome         |          Função                  |
-|      ---      |  ---          |           ---                    |
-|       ^       |  Circunflexo  |   Início da linha                |
-|       $       |  Cifrão       |   Final da linha                 |
-|      \b       |  Borda        |   Início ou fim de palavra       |
+  | Metacaractere |  Nome         |          Função                  |
+  |      ---      |  ---          |           ---                    |
+  |       ^       |  Circunflexo  |   Início da linha                |
+  |       $       |  Cifrão       |   Final da linha                 |
+  |      \b       |  Borda        |   Início ou fim de palavra       |
 
 #### Outros
 
-| Metacaractere |  Nome         |          Função                  |
-|      ---      |  ---          |           ---                    |
-|       \c      |  Escape       |   Torna literal o caractere c    |
-|      \|       |  Ou           |   Ou um ou outro                 |
-|     (...)     |  Grupo        |   Delimita um grupo              |
-|     \1...\9   |  Retrovisor   |   Texto casado nos grupos 1..9   |
+  | Metacaractere |  Nome         |          Função                  |
+  |      ---      |  ---          |           ---                    |
+  |       \c      |  Escape       |   Torna literal o caractere c    |
+  |      \|       |  Ou           |   Ou um ou outro                 |
+  |     (...)     |  Grupo        |   Delimita um grupo              |
+  |     \1...\9   |  Retrovisor   |   Texto casado nos grupos 1..9   |
 
 + Lembrando que curingas de linha de comando e ERs são diferentes.
 
@@ -103,20 +103,20 @@
 + POSIX é um padrão internacional que define regras de intervalo;
 + Ele é divido em classes:
 
-| Classe POSIX  |    Similar    |          Significa               |
-|      ---      |      ---      |           ---                    |
-|   [:upper:]   | [A-Z]         |   Letras maiúsculas              |
-|   [:lower:]   | [a-z]         |   Letras minúsculas              |
-|   [:alpha:]   | [A-Za-z]      |   Maiúsculas/minúsculas          |
-|   [:alnum:]   | [A-Za-z0-9]   |   Letras e números               |
-|   [:digit:]   | [0-9]         |   Números                        |
-|   [:xdigit:]  | [0-9A-Fa-f]   |   Números hexadecimais           |
-|   [:punct:]   | [.,!?:...]    |   Sinais de pontuação            |
-|   [:blank:]   | [ \t]         |   Espaço e Tabulação             |
-|   [:space:]   | [ \t\n\r\f\v] |   Caracteres brancos             |
-|   [:cntrl:]   |               |   Caracteres de controle         |
-|   [:graph:]   | [^ \t\n\r\f\v |   Números                        |
-|   [:print:]   | [^\t\n\r\f\v] |   Números hexadecimais           |
+  | Classe POSIX  |    Similar    |          Significa               |
+  |      ---      |      ---      |           ---                    |
+  |   [:upper:]   | [A-Z]         |   Letras maiúsculas              |
+  |   [:lower:]   | [a-z]         |   Letras minúsculas              |
+  |   [:alpha:]   | [A-Za-z]      |   Maiúsculas/minúsculas          |
+  |   [:alnum:]   | [A-Za-z0-9]   |   Letras e números               |
+  |   [:digit:]   | [0-9]         |   Números                        |
+  |   [:xdigit:]  | [0-9A-Fa-f]   |   Números hexadecimais           |
+  |   [:punct:]   | [.,!?:...]    |   Sinais de pontuação            |
+  |   [:blank:]   | [ \t]         |   Espaço e Tabulação             |
+  |   [:space:]   | [ \t\n\r\f\v] |   Caracteres brancos             |
+  |   [:cntrl:]   |               |   Caracteres de controle         |
+  |   [:graph:]   | [^ \t\n\r\f\v |   Números                        |
+  |   [:print:]   | [^\t\n\r\f\v] |   Números hexadecimais           |
 
 + Note que os colchetes fazem parte do POSIX, então para incluir ele numa lista ficaria *[[:lower:]]*, lembrando que *[:lower:]* POSIX puro, [[:lower:]] POSIX dentro de uma lista;
 + Exemplo:
@@ -227,16 +227,16 @@
   ```
 + Tabela de exemplos:
 
-|Metacaractere|               Repetições               |
-|     ---     |                  ---                   |
-|     {1, 3}  |    De 1 a 3                            |
-|     {3,}    |    Pelo menos 3 (3 ou mais)            |
-|     {0, 3}  |    Até 3                               |
-|     {3}     |    Exatamente 3                        |
-|     {1}     |    Exatamente 1                        |
-|     {0,1}   |    Zero ou 1 (igual ao opcional)       |
-|     {0,}    |    Zero ou mais (igual ao asterisco)   |
-|     {1,}    |    Um ou mais (igual o mais)           |
+  |Metacaractere|               Repetições               |
+  |     ---     |                  ---                   |
+  |     {1, 3}  |    De 1 a 3                            |
+  |     {3,}    |    Pelo menos 3 (3 ou mais)            |
+  |     {0, 3}  |    Até 3                               |
+  |     {3}     |    Exatamente 3                        |
+  |     {1}     |    Exatamente 1                        |
+  |     {0,1}   |    Zero ou 1 (igual ao opcional)       |
+  |     {0,}    |    Zero ou mais (igual ao asterisco)   |
+  |     {1,}    |    Um ou mais (igual o mais)           |
 
 + Resumo:
   + Chaves são precisas;
@@ -342,8 +342,34 @@
   ```
 + Podemos agrupar tudo que quisermos dentro de um grupo:
 
-|     Expressão    |           Casa com            |
-|        ---       |              ---              |
-|      (ha!)+      |    ha!, ha!ha!, ha!ha!ha!, ...   |
-|  (\.[0-9]){3}    |    0.8.9, .1.2.3, .7.7.7, ...   |
-|    ---    |    ---   |
+  |      Expressão      |           Casa com               |
+  |         ---         |              ---                 |
+  |       (ha!)+        |    ha!, ha!ha!, ha!ha!ha!, ...   |
+  |    (\.[0-9]){3}     |    0.8.9, .1.2.3, .7.7.7, ...    |
+  |  (www\.)?zz\.com    |    www.zz.com, zz.com            |
+
++ O poder do *ou* aumenta quando mistarado com grupo:
+
+  |      Expressão      |           Casa com               |
+  |         ---         |              ---                 |
+  |  boa-(tarde|noite)  |    boa-tarde, boa-noite          |
+  |  (#|n\.|núm) 7      |    # 7, n. 7, núm 7              |
+  |  (in|con)?certo     |    incerto, concerto , certo     |
+
++ Podemos trabalhar  com subgrupos também, exemplo:
+  ```grupo2
+  Frase: bola cola mala cala
+  ER: ((c|b|m)(o|a))la
+
+  Saída: bola cola mala cala
+  ```
++ Resumo:
+  + Grupos servem para agrupar;
+  + Grupos são muito poderosos;
+  + Grupos podem conter grupos;
+  + Grupos são quantificáveis;
+
+### Retrovisor
+
++
+ 
