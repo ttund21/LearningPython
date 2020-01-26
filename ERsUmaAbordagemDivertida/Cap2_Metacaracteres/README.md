@@ -371,5 +371,20 @@
 
 ### Retrovisor
 
-+
- 
++ Usado em conjunto com um grupo, ele tem a função de repetir a combinação de caracteres do grupo referenciado;
++ Retrovisor vai de \1 a \9;
++ Exemplo:
+  ```retrovisor
+  Frase: retrovisor, revisor, retro, visor.
+  ER: ((re)(tro)(visor)), \2\4, \2\3, \4.
+
+  Saída: retrovisor, revisor, retro, visor.
+  ```
++ Mais exemplos:
+  |  Expressão                |             Casa Com        |
+  |      ---                  |                ---          |
+  |  (lenta)(mente) é \2 \1   |  lentamente é mente lenta   |
+  |      ---    |      ---   |
+  |      ---    |      ---   |
+  |      ---    |      ---   |
+  
