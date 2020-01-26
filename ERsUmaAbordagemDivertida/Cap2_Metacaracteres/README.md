@@ -381,10 +381,17 @@
   Saída: retrovisor, revisor, retro, visor.
   ```
 + Mais exemplos:
-  |  Expressão                |             Casa Com        |
-  |      ---                  |                ---          |
-  |  (lenta)(mente) é \2 \1   |  lentamente é mente lenta   |
-  |      ---    |      ---   |
-  |      ---    |      ---   |
-  |      ---    |      ---   |
+
+  |           Expressão             |         Casa Com            |
+  |              ---                |                ---          |
+  |  (lenta)(mente) é \2 \1         |  lentamente é mente lenta   |
+  |  ((band)eira)nte \1 \2a         |  bandeirante bandeira banda |
+  |  in(d)ol(or) é sem \1\2         |  indolor é sem dor          |
+  |  ((((a)b)c)d)-1 = \1,\2,\3,\4   |  abcd-a = abcd,abc,ab,a     |
   
++ Para não se perder na contagem dos grupos, apenas conte os parênteses que abrem, esse vai ser o número do grupo;
++ Resumo:
+  + O retrovisor só funciona se usado com grupo;
+  + O retrovisor serve para procurar palavras repitidas;
+  + Numeram-se retrovisores contado os grupos da esquerda para a direita;
+  + Temos no máximo 9 retrovisores por ER.
