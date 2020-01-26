@@ -352,9 +352,9 @@
 
   |      Expressão      |           Casa com               |
   |         ---         |              ---                 |
-  |  boa-(tarde|noite)  |    boa-tarde, boa-noite          |
-  |  (#|n\.|núm) 7      |    # 7, n. 7, núm 7              |
-  |  (in|con)?certo     |    incerto, concerto , certo     |
+  |  boa-(tarde\|noite)  |    boa-tarde, boa-noite          |
+  |  (#\|n\\.\|núm) 7      |    # 7, n. 7, núm 7              |
+  |  (in\|con)?certo     |    incerto, concerto , certo     |
 
 + Podemos trabalhar  com subgrupos também, exemplo:
   ```grupo2
