@@ -115,8 +115,8 @@
   |   [:blank:]   | [ \t]         |   Espaço e Tabulação             |
   |   [:space:]   | [ \t\n\r\f\v] |   Caracteres brancos             |
   |   [:cntrl:]   |               |   Caracteres de controle         |
-  |   [:graph:]   | [^ \t\n\r\f\v |   Números                        |
-  |   [:print:]   | [^\t\n\r\f\v] |   Números hexadecimais           |
+  |   [:graph:]   | [^ \t\n\r\f\v |   Caracteres imprimiveis         |
+  |   [:print:]   | [^\t\n\r\f\v] |   Imprimíveis e o espaço         |
 
 + Note que os colchetes fazem parte do POSIX, então para incluir ele numa lista ficaria *[[:lower:]]*, lembrando que *[:lower:]* POSIX puro, [[:lower:]] POSIX dentro de uma lista;
 + Exemplo:

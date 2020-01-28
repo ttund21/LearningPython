@@ -20,7 +20,7 @@
   Saída: <title><\title>
   ```
 + Veja que o "não-guloso" casou apenas com o necessário;
-+ Lista de quantifecadores não gulosos:
++ Lista de quantificadores não gulosos:
 
   | Metacaractere  |        Nome          |
   |       ---      |         ---          |
@@ -50,4 +50,24 @@
     |  ab{1,3}?   |   ab  |
 
 ## Metacaracteres tipo barra-letra
+
++ São metacaracetres representado por uma barra-invertida(\) seguida de uma letra;
++ Lista de metacaracteres barra-letra:
+
+  |  b-l |  Equivalente POSIX  |        Significa       |
+  |  --- |          ---        |           ---          |
+  |  \d  |     [[:digit:]]     |  Dígito                |
+  |  \D  |     [^[:digit:]]    |  Não-dígito            |
+  |  \w  |     [[:alnum:]]     |  Palavra               |
+  |  \W  |     [^[:alnum:]]    |  Não-palavra           |
+  |  \s  |     [[:space:]]     |  Branco                |
+  |  \S  |     [^[:space:]]    |  Não-branco            |
+  |  \a  |     [[:alpha:]]     |  Alfabeto              |
+  |  \A  |     [^[:alpha:]]    |  Não-alfabeto          |
+  |  \h  |     [[:alpha:]_]    |  Cabeça de palavra     |
+  |  \H  |     [^[:alpha:]_]   |  Não-cabeça de palavra |
+  |  \l  |     [[:lower:]]     |  Minúsculas            |
+  |  \L  |     [^[:lower:]]    |  Não-minúsculas        |
+  |  \u  |     [[:upper:]]     |  Maiúsculas            |
+  |  \U  |     [^[:upper:]]    |  Não-maiúsculas        |
     
