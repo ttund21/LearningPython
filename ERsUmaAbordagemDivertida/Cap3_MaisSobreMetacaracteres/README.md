@@ -71,3 +71,19 @@
   |  \u  |     [[:upper:]]     |  Maiúsculas            |
   |  \U  |     [^[:upper:]]    |  Não-maiúsculas        |
     
++ Mais caracteres barra-letra:
+
+  |  b-l  | 	     Significa 		 |
+  |  ---  |   		---	         |
+  |  \B   |   Não-borda  		 |
+  |  \A   |   Início do texto      	 |
+  |  \Z   |   Fim do texto      	 |
+  |  \l   |   Torna minúscula      	 |
+  |  \L   |   Torna minúscula até \E     |
+  |  \u   |   Torna maiúscula      	 |
+  |  \U   |   Torna maiúscula até \E     |
+  |  \Q   |   Escapa até \E              |
+  |  \E   |   Fim da modificação         |
+  |  \G   |   Fim do casamento anterior  |
+
+## Metacaracteres modernosos
