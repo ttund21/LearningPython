@@ -117,3 +117,86 @@
   4. Chame o método **group()** do objeto Match, para retorna a string que deu Match.
 
 ## Mais correspondência de padrões com expressõoes regulares
+
+### Agrupando com parênteses
+
++ Nas expressões podemos agrupar caracteres com o parênteses "()", após a abertura e o fechamento do parênteses é criado 1 grupo;
++ Então no python você poderá usar o método *group()* para trazer o correspondente ao casamento;
++ Exemplo 1:
+  ```erGrupo1
+  import re
+
+  message = 'Call me, 3258-8899.'
+
+  telRegex = re.compile(r'(\d{4}-?){2}')
+  telSearch = telRegex.search(message)
+
+  print(telSearch.group())
+
+  # Saída:
+  # 3258-8899
+  ```
++ Observe o agrupamento de caracteres *(\d{4}-?){2}*, veja que o \d\d\d\d-? fica como se fosse um caractere só, um grupo;
++ Exemplo 2:
+  ```erGrupo2
+  import re
+
+  message = 'Call me, 3258-8899.'
+
+  telRegex = re.compile(r'(\d{4})-(\d{4})')
+  telSearch = telRegex.search(message)
+
+  print(telSearch.group())
+  print(f"Grupo 1: {telSearch.group(1)}")
+  print(f"Grupo 2: {telSearch.group(2)}")
+
+  # Saída:
+  # 3258-8899
+  # Grupo 1: 3258
+  # Grupo 2: 8899
+  ```
++ Podemos também chamar todos os grupos de uma vez em forma de tupla, exemplo:
+  ```erGrupo3
+  import re
+
+  message = 'Call me, 3258-8899.'
+
+  telRegex = re.compile(r'(\d{4})-(\d{4})')
+  telSearch = telRegex.search(message)
+
+  print(telSearch.groups())
+
+  # Saída:
+  # ('3258', '8899')
+  ```
++ Caso seja necessário o uso do parenteses na ER só é necessário escapa-lo com a barra invertida i\\, exemplo:
+  ```erGrupo4
+  import re
+
+  message = 'Call me, (79)3258-8899.'
+
+  telRegex = re.compile(r'(\(\d{1,3}\))(\d{4}-?){2}')
+  telSearch = telRegex.search(message)
+
+  print(telSearch.group())
+  ```
++ Observe que ficará (**\\(**\d{1,3}**\\)**).
+
+### Fazendo a correspondência de vários grupos com pipe
+
++ O caractere pipe(**|**) na ER significa **ou**;
++ Um exemplo de uso:
+  ```erPipe
+  import re
+
+  me = "Vou levar suco!"
+
+  regex = re.compile(r"suco|refrigerante")
+  regexSearch = regex.search(me)
+
+  print(regexSearch.group())
+  
+  # Saída:
+  # suco
+  ```
++ Então nesse caso nossa ER ia casar ou com suco ou com refrigerante;
