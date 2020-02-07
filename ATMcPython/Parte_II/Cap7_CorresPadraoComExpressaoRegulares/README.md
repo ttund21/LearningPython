@@ -200,3 +200,35 @@
   # suco
   ```
 + Então nesse caso nossa ER ia casar ou com suco ou com refrigerante;
+
+### Correspondência opicional usando ponto de interrogação
+
++ O ponto de interrogação deixa o caractere anterior a ele opcional, exemplo:
+  ```interrogacao
+  import re
+
+  message = "Number: 3255-8789"
+
+  regex = re.compile(r"(\(\d{3}\))?(\d{4}-?){2}")
+  regexSearch = regex.search(message)
+
+  print(regexSearch.group())
+
+  # Saída:
+  # 3255-8789
+  ```
++ Observe o primeiro grupo inserido *(\\(\d{3}\\))?* ele é uma ER que casa com um DDD, mas mesmo o telefone *3255-8789* não possuindo o um DDD ele casou mesmo assim, pois o grupo foi setado como opicional.
+
+### Correspondendo a zero ou mais ocorrências usando asterisco
+
++ O asterisco significa que o caractere anterior pode casar com zero ou mais, exemplo:
+  ```asterisco
+  import re
+
+  message = "Wowowowowowozimu"
+
+  regex = re.compile(r"((W|w)o)*zimu")
+  regexSearch = regex.search(message)
+
+  print(regexSearch.group()dsadsadasexit
+  ```
