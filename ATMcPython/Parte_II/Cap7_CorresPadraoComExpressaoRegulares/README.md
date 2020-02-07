@@ -230,5 +230,37 @@
   regex = re.compile(r"((W|w)o)*zimu")
   regexSearch = regex.search(message)
 
-  print(regexSearch.group()dsadsadasexit
+  print(regexSearch.group())
   ```
++ Obeserve que *(W|w)o)\*zimu* poderá casar com:
+  + zimu
+  + Wozimu
+  + wozimu
+  + wowowowowowowowowoowowozimu
+  + etc 
+
+### Correspondendo a uma ou mais ocorrêcias usando o sinal de adição
+
++ O sinal de adição casará o caractere anterior com um ou mais, exemplo:
+  ```mais
+  import re
+
+  message = "Wowowowowowozimu"
+
+  regex = re.compile(r"((W|w)o)+zimu")
+  regexSearch = regex.search(message)
+
+  print(regexSearch.group())
+
+  # Saída:
+  # Wowowowowowozimu
+  ```
++ Obeserve que *((W|w)o)+zimu* poderá casar com:
+  + Wozimu
+  + Wowozimu
+  + wowowowozimu
+  + etc
+
+### Correspondendo a repetições específicas usando chaves
+
++ 
