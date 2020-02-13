@@ -75,7 +75,7 @@
   -> Você errou pela 2ª vez. Tente de novo!
   ```
 
-12. Valida e corrige número de telefone. Faça um programa que leia um número de telefone, e corrija o número no caso deste conter somente 7 dígitos, acrescentando o '3' na frente. O usuário pode informar o número com ou sem o traço separador.
+12. Valida e corrige número de telefone. Faça um programa que leia um número de telefone, e corrija o número no caso deste conter somente 7 dígitos, acrescentando o '3' na frente. O usuário pode informar o número com ou sem o traço separador. FEITO
   ```12
   Valida e corrige número de telefone
   Telefone: 461-0133
